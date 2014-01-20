@@ -276,7 +276,8 @@
       table.alternating tr:nth-child(even) {
         background-color: rgba(0, 0, 0, .25);
       }
-    #points-table td {
+    #points-table td,
+    #types-table td {
       text-align: center;
     }
     #points-table tr td:nth-child(3) {
@@ -284,6 +285,9 @@
     }
     table.image-table img {
       vertical-align: middle;
+    }
+    ol.nested-list ol {
+      list-style-type: lower-alpha;
     }
   </style>
 </head>
@@ -327,6 +331,8 @@
       <li>- <a href="#Calculating-Points">Calculating Points</a></li>
       <li>- <a href="#Preparation">Preparation</a></li>
       <li>- <a href="#Turn-Structure">Turn Structure</a></li>
+      <li>- <a href="#Resolving-Effects">Resolving Effects</a></li>
+      <li>- <a href="#Discard-Piles">Discard Piles</a></li>
       <li>- <a href="#Knocking">Knocking</a></li>
       <li>- <a href="#Resolving-Ties">Resolving Ties</a></li>
     </ul>
@@ -418,6 +424,7 @@
     <ul class="toc_section">
       <li>- <a href="#Rotation">Rotation</a></li>
       <li>- <a href="#Set">Set</a></li>
+      <li>- <a href="#Type">Type</a></li>
     </ul>
 
     <a class="toc_title" href="#FAQ">
@@ -599,9 +606,9 @@
     
     <p id="Pokemon-Decks">
       <b class="header">Pokemon Decks</b><br />
-      Pokemon are sorted into Decks by their Types. All Fire Pokemon go in
-      one Deck, all Waters in another, etc. Pokemon with multiple Types
-      (Delta Species) go in a special "Delta" Deck.
+      Pokemon are sorted into Decks by their <a href="#Type">Types</a>.
+      All Fire Pokemon go in one Deck, all Waters in another, etc. Pokemon
+      with multiple Types (Delta Species) go in a special "Delta" Deck.
     </p>
     
     <p>
@@ -624,16 +631,16 @@
     <p id="Energy-Deck">
       <b class="header">Energy Deck</b><br />
       All Energy cards go in a single Deck. There should be Energies for each
-      Type of Pokemon Deck used. Energy cards of the "basic" Types (Fighting,
-      Fire, Grass, Lightning, Psychic, Water, Darkness, Metal, Fairy
-      and Colorless) should be available in same or similar quantities. (Colorless
+      Type of Pokemon Deck used. "Basic" Energy cards (Colorless, Darkness,
+      Dragon, Fairy, Fighting, Fire, Grass, Lightning, Metal, Psychic, and Water)
+      should be available in same or similar quantities. (Colorless
       is not a "wildcard" like in the Pokemon TCG.) <a href="http://bulbapedia.bulbagarden.net/wiki/List_of_Special_Energy_cards">Special Energies</a> can also be included.
     </p>
     
     <p>
       <i>Example:</i> Players have only built Colorless, Fire, and
-      Dark Pokemon Decks. A well-balanced Energy Deck for that combination would
-      have 4 Colorless, 4 Fire, 4 Dark, and 2 Rainbow Energies.
+      Darkness Pokemon Decks. A well-balanced Energy Deck for that combination would
+      have 4 Colorless, 4 Fire, 4 Darkness, and 2 Rainbow Energies.
     </p>
     
     <p id="Trainer-Deck">
@@ -691,51 +698,51 @@
         <th>Points</th>
       </tr>
       <tr>
-        <td><img src="images/cards/charmander.jpg" /> or <img src="images/cards/togepi.jpg" /><br />
+        <td><img src="images/cards-sm/charmander.jpg" /> or <img src="images/cards-sm/togepi.jpg" /><br />
         <i>Charmander; Togepi</i></td>
         <td>Basic ("Stage 1") / Baby</td>
         <td>1</td>
       </tr>
       <tr>
-        <td><img src="images/cards/charmeleon.jpg" /><br />
+        <td><img src="images/cards-sm/charmeleon.jpg" /><br />
         <i>Charmeleon</i></td>
         <td>Stage 2</td>
         <td>2</td>
       </tr>
       <tr>
-        <td><img src="images/cards/charizard.jpg" /><br />
+        <td><img src="images/cards-sm/charizard.jpg" /><br />
         <i>Charizard</i></td>
         <td>Stage 3</td>
         <td>3</td>
       </tr>
       <tr>
-        <td><img src="images/cards/pinsir.jpg" /><br />
+        <td><img src="images/cards-sm/pinsir.jpg" /><br />
         <i>Pinsir</i></td>
         <td>Does not evolve</td>
         <td>4</td>
       </tr>
       <tr>
-        <td><img src="images/cards/mewtwo.jpg" /><br />
+        <td><img src="images/cards-sm/mewtwo.jpg" /><br />
         <i>Mewtwo</i></td>
         <td>Legendary</td>
         <td>5</td>
       </tr>
       <tr>
-        <td><img src="images/cards/charmander.jpg" /> + <img src="images/cards/charmeleon.jpg" /><br />
+        <td><img src="images/cards-sm/charmander.jpg" /> + <img src="images/cards-sm/charmeleon.jpg" /><br />
         <i>Charmander, Charmeleon</i></td>
         <td>Stage 1 + Stage 2<br />
         <i>Stage 3 not present</i></td>
         <td>6</td>
       </tr>
       <tr>
-        <td><img src="images/cards/riolu.jpg" /> + <img src="images/cards/lucario.jpg" /><br />
+        <td><img src="images/cards-sm/riolu.jpg" /> + <img src="images/cards-sm/lucario.jpg" /><br />
         <i>Riolu, Lucario</i></td>
         <td>Stage 1 + Stage 2<br />
         <i>Only 2 Stages exist</i></td>
         <td>8</td>
       </tr>
       <tr>
-        <td><img src="images/cards/eevee.jpg" /> + <img src="images/cards/vaporeon.jpg" /><br />
+        <td><img src="images/cards-sm/eevee.jpg" /> + <img src="images/cards-sm/vaporeon.jpg" /><br />
         <i>Eevee, Vaporeon</i></td>
         <td>Stage 1 + Stage 2<br />
         <i>Only 2 Stages exist<br />
@@ -743,20 +750,20 @@
         <td>10</td>
       </tr>
       <tr>
-        <td><img src="images/cards/charmander.jpg" /> + <img src="images/cards/charmeleon.jpg" /> + <img src="images/cards/charizard.jpg" /><br />
+        <td><img src="images/cards-sm/charmander.jpg" /> + <img src="images/cards-sm/charmeleon.jpg" /> + <img src="images/cards-sm/charizard.jpg" /><br />
         <i>Charmander, Charmeleon, Charizard</i></td>
         <td>Stage 1 + Stage 2 + Stage 3</td>
         <td>12</td>
       </tr>
       <tr>
-        <td><img src="images/cards/charmander-lightning.jpg" /> + <img src="images/cards/charmeleon.jpg" /> + <img src="images/cards/charizard.jpg" /><br />
+        <td><img src="images/cards-sm/charmander-lightning.jpg" /> + <img src="images/cards-sm/charmeleon.jpg" /> + <img src="images/cards-sm/charizard.jpg" /><br />
         <i>Charmander <img src="images/types/lightning.png" alt="Lightning" />, Charmeleon, Charizard</i></td>
         <td>Stage 1 + Stage 2 + Stage 3<br />
         <i>2 Different Types</i></td>
         <td>14</td>
       </tr>
       <tr>
-        <td><img src="images/cards/charmander-lightning.jpg" /> + <img src="images/cards/charmeleon.jpg" /> + <img src="images/cards/charizard-darkness.jpg" /><br />
+        <td><img src="images/cards-sm/charmander-lightning.jpg" /> + <img src="images/cards-sm/charmeleon.jpg" /> + <img src="images/cards-sm/charizard-darkness.jpg" /><br />
         <i>Charmander <img src="images/types/lightning.png" alt="Lightning" />, Charmeleon, Charizard <img src="images/types/darkness.png" alt="Darkness" /></i></td>
         <td>Stage 1 + Stage 2 + Stage 3<br />
         <i>3 Different Types</i></td>
@@ -766,19 +773,146 @@
     
     <p id="Preparation">
       <b class="header">Preparation</b><br />
+      Shuffle and cut all Decks, and place them each face-down.
+    </p>
+    
+    <p>
+      Each player rolls a die. Whoever rolls highest goes first.
+      Players who tie for highest re-roll among each other.
+      Players will take Turns clockwise from the first player.
+    </p>
+    
+    <p>
+      The game begins now... believe it! And may the odds ever be in your favor.
     </p>
     
     <p id="Turn-Structure">
       <b class="header">Turn Structure</b><br />
+      Each player's Turn is divided into Phases. Phases occur in the order
+      listed below. One Phase transitions into the next as a
+      result of a player's actions. (<i>Example:</i> Starting one's Turn and
+      immediately drawing implies having entered the Knock Phase and having
+      chosen not to Knock.)
+    </p>
+    
+    <ul>
+      <li><b>Knock Phase</b> &mdash; If the turn player wishes to Knock, he must
+      do so at the beginning of his Turn.</li>
+      <li><b>Draw Phase</b> &mdash; The turn player draws 1 Trainer card and
+      activates its effect. (<a href="#Trainers">Trainer effects are listed here.</a>)</li>
+      <li><b>Effect Phase</b> &mdash; The effect of the Trainer resolves.
+      See <a href="#Resolving-Effects">Resolving Effects</a>.</li>
+      <li><b>Discard Phase</b> &mdash; If the turn player's hand size exceeds the
+      hand size limit (defaulting to 10 cards), he must discard cards to his
+      <a href="#Discard-Pile">Discard Pile</a> until his hand size matches
+      the limit.</li>
+    </ul>
+    
+    <p id="Resolving-Effects">
+      <b class="header">Resolving Effects</b><br />
+      Cards' effects are listed in the <a href="#Pokemon">Pokemon</a>,
+      <a href="#Legendaries">Legendaries</a>, <a href="#Energies">Energies</a>
+      and <a href="#Trainers">Trainers</a> sections. (A card's effect is <b>not</b>
+      what is physically printed on it.)
+    </p>
+    
+    <p>
+      After a card's effect has finished resolving, discard it to its corresponding
+      Discard Pile, unless its effect instructs otherwise.
+    </p>
+    
+    <p>
+      If an effect instructs multiple cards to be drawn, they are all drawn
+      one-by-one (without activation), and the order which they
+      are drawn is made obvious. If an effect instructs multiple cards to be
+      added, the player declares an arbitrary order in which they are added.
+      After multiple cards are drawn or added, activate their effects "in order."
+    </p>
+    
+    <p>
+      <i>Example:</i> A player activates Professor Oak and discards 3 cards.
+      He draws a Fire Energy, a Darkness Energy, and a Grass Energy, and also
+      a Bill and a Pokemon Center. After drawing all these cards, he activates
+      them all in the order they were drawn.
+    </p>
+    
+    <p>
+      If in the middle of resolving an effect <i>another</i> card's effect is
+      activated, immediately begin resolving the new effect. After the new
+      effect is resolved, finish resolving the previous card's effect.
+    </p>
+    
+    <p>
+      <i>Example:</i> Continuing on the last example, the player starts
+      activating his cards:
+    </p>
+    
+    <ol class="nested-list">
+      <li>He activates his Fire Energy and draws an
+      insignificant Fire Pokemon.</li>
+      <li>Then he activates his Darkness Energy and
+      draws Yveltal.
+        <ol>
+          <li>Yveltal's effect now activates, and the rest of the player's
+          hand is discarded.</li>
+        </ol>
+      </li>
+      <li>Having resolved Yveltal's effect, he now continues resolving
+      Professor Oak. The Grass Energy activates and resolves.</li>
+      <li>Then Bill activates, and the player draws a Water and Lightning Energy.
+        <ol>
+          <li>He activates and resolves the Water Energy.</li>
+          <li>Same for the Lightning Energy.</li>
+        </ol>
+      </li>
+      <li>Then, he continues resolving Professor Oak, and activates Pokemon Center.
+      Pokemon Center adds Mewtwo, Mew, and Pikachu to the player's hand, and
+      he declares that they are added in that order.
+        <ol>
+          <li>Mewtwo's effect then activates and resolves.</li>
+          <li>Same for Mew's effect.</li>
+        </ol>
+      </li>
+      <li>Professor Oak has now resolved.</li>
+      <li>The Effect Phase ends.</li>
+    </ol>
+    
+    <p id="Discard-Piles">
+      <b class="header">Discard Piles</b><br />
+      Each player has his own Discard Pile, for his own Pokemon. There are also 2
+      Discard Piles which are shared by all players: The Energy Discard Pile and
+      the Trainer Discard Pile, where resolved Energies and Trainers are
+      respectively discarded.
     </p>
     
     <p id="Knocking">
       <b class="header">Knocking</b><br />
+      If the Trainer Discard Pile contains a number of cards greater than
+      or equal to the quantity "number of players &times; 10", then at
+      the start of a player's turn (during his Knock Phase) he may make a
+      "knocking" sound and declare that he is Knocking.
+    </p>
+    
+    <p>
+      3 Rotations after a player has Knocked (the Turn he Knocked being the
+      first in the Rotation), all players reveal their hands to each other.
+      Players count their own and their opponents' points, and whoever has
+      the most points wins. In the case of 2 or more players sharing the highest
+      score, see <a href="#Resolving-Ties">Resolving Ties</a>.
     </p>
     
     <p id="Resolving-Ties">
       <b class="header">Resolving Ties</b><br />
+      If, after counting, 2 or more players share the highest score, the
+      following procedure is followed:
     </p>
+    
+    <ol>
+      <li>All players with lower scores shuffle their cards back into the cards'
+      respective Decks, and withdraw from the game.</li>
+      <li>The remaining players continue playing normally (until a
+      player Knocks again and 3 Rotations pass and a definite winner is decided).</li>
+    </ol>
 
     <h2 id="Pokemon">Pokemon</h2>
     
@@ -799,7 +933,7 @@
     <p id="Rotation">
       <b class="header">Rotation</b><br />
       A "Rotation" is said to have occurred after all players have
-      taken 1 turn each in succession.
+      taken 1 Turn each in succession.
     </p>
     
     <p id="Set">
@@ -831,6 +965,81 @@
       <li>Charmeleon + Charizard</li>
       <li>Poliwag + Poliwhirl + Poliwrath + Politoed</li>
     </ul>
+    
+    <p id="Type">
+      <b class="header">Type</b><br />
+      Every Pokemon has a Type (or multiple Types). Pokemon are always
+      sorted into Decks corresponding to their Types. Energies have Types,
+      and correspond to their Type's respective Pokemon Decks.
+    </p>
+    
+    <p>
+      Colorless Energy is <b>not</b> a "wildcard" like in the TCG; it
+      corresponds to the Colorless Pokemon Deck, just as Fire Energy
+      corresponds to the Fire Pokemon Deck.
+    </p>
+    
+    <p>
+      The following are all possible Types. Players may choose to use only
+      a subset of these Types when preparing to play.
+    </p>
+    
+    <table id="types-table" class="alternating image-table">
+      <tr>
+        <th>Symbol</th>
+        <th>Name</th>
+      </tr>
+      <tr>
+        <td><img src="images/types/colorless.png" alt="Colorless" /></td>
+        <td>Colorless</td>
+      </tr>
+      <tr>
+        <td><img src="images/types/darkness.png" alt="Darkness" /></td>
+        <td>Darkness</td>
+      </tr>
+      <tr>
+        <td><img src="images/types/dragon.png" alt="Dragon" /></td>
+        <td>Dragon</td>
+      </tr>
+      <tr>
+        <td><img src="images/types/fairy.png" alt="Fairy" /></td>
+        <td>Fairy</td>
+      </tr>
+      <tr>
+        <td><img src="images/types/fighting.png" alt="Fighting" /></td>
+        <td>Fighting</td>
+      </tr>
+      <tr>
+        <td><img src="images/types/fire.png" alt="Fire" /></td>
+        <td>Fire</td>
+      </tr>
+      <tr>
+        <td><img src="images/types/grass.png" alt="Grass" /></td>
+        <td>Grass</td>
+      </tr>
+      <tr>
+        <td><img src="images/types/lightning.png" alt="Lightning" /></td>
+        <td>Lightning</td>
+      </tr>
+      <tr>
+        <td><img src="images/types/metal.png" alt="Metal" /></td>
+        <td>Metal</td>
+      </tr>
+      <tr>
+        <td><img src="images/types/psychic.png" alt="Psychic" /></td>
+        <td>Psychic</td>
+      </tr>
+      <tr>
+        <td><img src="images/types/water.png" alt="Water" /></td>
+        <td>Water</td>
+      </tr>
+    </table>
+    
+    <p>
+      Note that Dragon Energy does not currently exist. You'll have to
+      either proxy it with <a href="images/cards-bg/dragon-energy.jpg">a fake</a>
+      or make-believe with another Energy.
+    </p>
     
     <h2 id="FAQ">F.A.Q.</h2>
 
