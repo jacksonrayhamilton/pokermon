@@ -277,7 +277,8 @@
         background-color: rgba(0, 0, 0, .25);
       }
     #points-table td,
-    #types-table td {
+    #types-table td,
+    #unknown-table td {
       text-align: center;
     }
     #points-table tr td:nth-child(3) {
@@ -342,32 +343,32 @@
     </a>
     <ul class="toc_section">
       <li>- <a href="#Babies">Babies</a></li>
-      <li>- <a href="#Jynx">Jynx</a></li>
       <li>- <a href="#Drowzee">Drowzee</a></li>
       <li>- <a href="#Hypno">Hypno</a></li>
-      <li>- <a href="#Wobbuffet">Wobbuffet</a></li>
+      <li>- <a href="#Jynx">Jynx</a></li>
       <li>- <a href="#Unknown">Unknown</a></li>
+      <li>- <a href="#Wobbuffet">Wobbuffet</a></li>
     </ul>
     
     <a class="toc_title" href="#Legendaries">
       Legendaries
     </a>
     <ul class="toc_section">
-      <li>- <a href="#Celebi">Celebi</a></li>
-      <li>- <a href="#Entei">Entei</a></li>
-      <li>- <a href="#Raikou">Raikou</a></li>
-      <li>- <a href="#Mew">Mew</a></li>
       <li>- <a href="#Mewtwo">Mewtwo</a></li>
-      <li>- <a href="#Palkia">Palkia</a></li>
-      <li>- <a href="#Groudon">Groudon</a></li>
-      <li>- <a href="#Giratina">Giratina</a></li>
-      <li>- <a href="#Arceus">Arceus</a></li>
-      <li>- <a href="#Rockets-Entei">Rocket's Entei</a></li>
-      <li>- <a href="#Rockets-Raikou">Rocket's Raikou</a></li>
       <li>- <a href="#Rockets-Mewtwo">Rocket's Mewtwo</a></li>
+      <li>- <a href="#Mew">Mew</a></li>
+      <li>- <a href="#Raikou">Raikou</a></li>
+      <li>- <a href="#Rockets-Raikou">Rocket's Raikou</a></li>
+      <li>- <a href="#Entei">Entei</a></li>
+      <li>- <a href="#Rockets-Entei">Rocket's Entei</a></li>
+      <li>- <a href="#Celebi">Celebi</a></li>
+      <li>- <a href="#Groudon">Groudon</a></li>
       <li>- <a href="#Jirachi">Jirachi</a></li>
+      <li>- <a href="#Palkia">Palkia</a></li>
       <li>- <a href="#Heatran">Heatran</a></li>
+      <li>- <a href="#Giratina">Giratina</a></li>
       <li>- <a href="#Darkrai">Darkrai</a></li>
+      <li>- <a href="#Arceus">Arceus</a></li>
       <li>- <a href="#Yveltal">Yveltal</a></li>
     </ul>
     
@@ -375,14 +376,15 @@
       Energies
     </a>
     <ul class="toc_section">
-      <li>- <a href="#Rainbow">Rainbow</a></li>
-      <li>- <a href="#Delta-Rainbow">Delta Rainbow</a></li>
-      <li>- <a href="#Blend-GFPD">Blend GFPD</a></li>
-      <li>- <a href="#Blend-WEPM">Blend WEPM</a></li>
-      <li>- <a href="#Miracle">Miracle</a></li>
-      <li>- <a href="#Full-Heal">Full Heal</a></li>
-      <li>- <a href="#Retro">Retro</a></li>
-      <li>- <a href="#Recycle">Recycle</a></li>
+      <li>- <a href="#Normal-Energy">Normal Energy</a></li>
+      <li>- <a href="#Rainbow-Energy">Rainbow Energy</a></li>
+      <li>- <a href="#Delta-Rainbow-Energy">Delta Rainbow Energy</a></li>
+      <li>- <a href="#Blend-GFPD-Energy">Blend GFPD Energy</a></li>
+      <li>- <a href="#Blend-WEPM-Energy">Blend WEPM Energy</a></li>
+      <li>- <a href="#Miracle-Energy">Miracle Energy</a></li>
+      <li>- <a href="#Full-Heal-Energy">Full Heal Energy</a></li>
+      <li>- <a href="#Recycle-Energy">Recycle Energy</a></li>
+      <li>- <a href="#Retro-Energy">Retro Energy</a></li>
     </ul>
     
     <a class="toc_title" href="#Trainers">
@@ -422,6 +424,7 @@
       Glossary
     </a>
     <ul class="toc_section">
+      <li>- <a href="#Get">Get</a></li>
       <li>- <a href="#Rotation">Rotation</a></li>
       <li>- <a href="#Set">Set</a></li>
       <li>- <a href="#Type">Type</a></li>
@@ -797,7 +800,7 @@
     
     <p id="Knocking">
       <b class="header">Knocking</b><br />
-      If the Trainer Discard Pile contains a number of cards greater than or equal to the quantity "number of players &times; 10", then at the start of a player's turn (during his Knock Phase) he may make a "knocking" sound and declare that he is Knocking.
+      If the Trainer Discard Pile contains a number of cards greater than or equal to the quantity "(number of players) &times; 10", then at the start of a player's turn (during his Knock Phase) he may make a "knocking" sound and declare that he is Knocking.
     </p>
     
     <p>
@@ -816,16 +819,337 @@
 
     <h2 id="Pokemon">Pokemon</h2>
     
+    <p>
+      There are lots of Pokemon, but only a few have special qualities and effects. (Legendary Pokemon have their <a href="#Legendaries">own section</a>.)
+    </p>
+    
+    <p id="Babies">
+      <img src="images/sprites/togepi.gif" alt="Togepi" /> <b class="header">Babies</b><br />
+      Baby Pokemon are optional components of any Evolution Tree. If they are left out of a Set, their direct evolutions are treated as Stage 1 Pokemon. If they are included in a Set, the Baby is treated as the Stage 1 Pokemon, and every Pokemon after it is treated as being 1 Stage higher.
+    </p>
+    
+    <p>
+      <i>Example:</i> Here are a few cards and Sets, and their point values:
+    </p>
+    
+    <ul>
+      <li>Elekid = 1 point (Baby)</li>
+      <li>Electabuzz = 1 point (Stage 1)</li>
+      <li>Electabuzz + Electivire = 8 points ("2-Stage" Evolution Tree)</li>
+      <li>Elekid + Electabuzz = 6 points (First 2 Stages of a 3-Stage Tree)</li>
+      <li>Elekid + Electabuzz + Electivire = 12 points (3-Stage Tree)</li>
+    </ul>
+    
+    <p id="Drowzee">
+      <img src="images/sprites/drowzee.gif" alt="Drowzee" /> <b class="header">Drowzee</b><br />
+      After getting: Skip your next turn.
+    </p>
+    
+    <p id="Hypno">
+      <img src="images/sprites/hypno.gif" alt="Hypno" /> <b class="header">Hypno</b><br />
+      After getting: Select 1 opponent. He skips his next turn.
+    </p>
+    
+    <p id="Jynx">
+      <img src="images/sprites/jynx.gif" alt="Jynx" /> <b class="header">Jynx</b><br />
+      After getting: Discard 1 card, except this card.
+    </p>
+    
+    <p id="Unknown">
+      <img src="images/sprites/unknown.gif" alt="Unknown" /> <b class="header">Unknown</b><br />
+      When redeemed as a Set with other Unknowns, the points of that Set is the quantity "(number of Unknowns)<sup>2</sup> + 2".
+    </p>
+    
+    <table id="unknown-table" class="alternating">
+      <tr>
+        <th># Unknowns</th>
+        <th>Points</th>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>6</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>11</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>18</td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td>27</td>
+      </tr>
+      <tr>
+        <td>6</td>
+        <td>38</td>
+      </tr>
+      <tr>
+        <td colspan="2">Etc...</td>
+      </tr>
+    </table>
+    
+    <p id="Wobbuffet">
+      <img src="images/sprites/wobbuffet.gif" alt="Wobbuffet" /> <b class="header">Wobbuffet</b><br />
+      After a player activates a Trainer, say "WOBBUFFET" and discard this card: Negate the Trainer.
+    </p>
+    
     <h2 id="Legendaries">Legendaries</h2>
+    
+    <p>
+      Legendaries must be revealed whenever gotten, and their effects must be activated.
+    </p>
+    
+    <p id="Mewtwo">
+      <img src="images/sprites/mewtwo.gif" alt="Mewtwo" /> <b class="header">Mewtwo</b><br />
+      After getting: Look at 1 opponent's hand and discard 1 card from it.
+    </p>
+
+    <p id="Rockets-Mewtwo">
+      <img src="images/sprites/mewtwo.gif" alt="Rocket's Mewtwo" /> <b class="header">Rocket's Mewtwo</b><br />
+      After getting: Look at 1 opponent's hand and discard 1 card from it. Then that opponent looks at your hand and discards 1 card from it.
+    </p>
+
+    <p id="Mew">
+      <img src="images/sprites/mew.gif" alt="Mew" /> <b class="header">Mew</b><br />
+      After getting: Shuffle this card into its Pile and add any Pokemon from any Pile, except Arceus.
+    </p>
+
+    <p id="Raikou">
+      <img src="images/sprites/raikou.gif" alt="Raikou" /> <b class="header">Raikou</b><br />
+      After getting: Randomly discard 2 cards from each opponent's hand.
+    </p>
+
+    <p id="Rockets-Raikou">
+      <img src="images/sprites/raikou.gif" alt="Rocket's Raikou" /> <b class="header">Rocket's Raikou</b><br />
+      After getting: Randomly discard 2 cards from each opponent's hand. Then select 1 opponent and he randomly discards 2 cards from your hand.
+    </p>
+
+    <p id="Entei">
+      <img src="images/sprites/entei.gif" alt="Entei" /> <b class="header">Entei</b><br />
+      After getting: Reveal this card continuously. All opponents play with their hands revealed.
+    </p>
+
+    <p id="Rockets-Entei">
+      <img src="images/sprites/entei.gif" alt="Rocket's Entei" /> <b class="header">Rocket's Entei</b><br />
+      After getting: Reveal this card continuously. All players play with their hands revealed.
+    </p>
+
+    <p id="Celebi">
+      <img src="images/sprites/celebi.gif" alt="Celebi" /> <b class="header">Celebi</b><br />
+      After getting: For the next 2 Rotations, all opponent's turns are skipped.
+    </p>
+
+    <p id="Groudon">
+      <img src="images/sprites/groudon.gif" alt="Groudon" /> <b class="header">Groudon</b><br />
+      After getting: All opponents exchange as many cards as possible between their hands and their Discard Piles.
+    </p>
+
+    <p id="Jirachi">
+      <img src="images/sprites/jirachi.gif" alt="Jirachi" /> <b class="header">Jirachi</b><br />
+      After getting: Add any 1 Trainer from the Trainer Pile.
+    </p>
+
+    <p id="Palkia">
+      <img src="images/sprites/palkia.gif" alt="Palkia" /> <b class="header">Palkia</b><br />
+      After getting: Reveal this card continuously. All opponents have a hand size limit of 8.
+    </p>
+
+    <p id="Heatran">
+      <img src="images/sprites/heatran.gif" alt="Heatran" /> <b class="header">Heatran</b><br />
+      After getting: Select 1 Pile. Count out half of the Pile, face-down, rounded up, and send that half to your Discard Pile.
+    </p>
+
+    <p id="Giratina">
+      <img src="images/sprites/giratina.gif" alt="Giratina" /> <b class="header">Giratina</b><br />
+      After getting: Discard your entire hand, except this card.
+    </p>
+
+    <p id="Darkrai">
+      <img src="images/sprites/darkrai.gif" alt="Darkrai" /> <b class="header">Darkrai</b><br />
+      After getting: All opponents go to sleep. (At the beginning of an asleep player's turn, he flips a coin. If heads, he wakes up. If tails, he skips his turn.)
+    </p>
+
+    <p id="Arceus">
+      <img src="images/sprites/arceus.gif" alt="Arceus" /> <b class="header">Arceus</b><br />
+      After getting: Draw 1 Pokemon from each Pile.
+    </p>
+
+    <p id="Yveltal">
+      <img src="images/sprites/yveltal.gif" alt="Yveltal" /> <b class="header">Yveltal</b><br />
+      After getting: Discard your hand, except for this card. This card's point value is the quantity "(cards in your Discard Pile) / 2", rounded up.
+    </p>
+
     
     <h2 id="Energies">Energies</h2>
     
+    <p id="Normal-Energy">
+      <img src="images/types/colorless.png" alt="Colorless" /><img src="images/types/darkness.png" alt="Darkness" /><img src="images/types/dragon.png" alt="Dragon" /><img src="images/types/fairy.png" alt="Fairy" /><img src="images/types/fighting.png" alt="Fighting" /><img src="images/types/fire.png" alt="Fire" /><img src="images/types/grass.png" alt="Grass" /><img src="images/types/lightning.png" alt="Lightning" /><img src="images/types/metal.png" alt="Metal" /><img src="images/types/psychic.png" alt="Psychic" /><img src="images/types/water.png" alt="Water" /> <b class="header">Normal Energy</b><br />
+      <i>This effect applies for any normal ("basic") Energy.</i><br />
+      <i>A normal Energy would have any <b>one</b> of the above Types.</i><br />
+      Draw 1 card from the Pokemon Deck corresponding to this card's Type.
+    </p>
+    
+    <p id="Rainbow-Energy">
+      <img src="images/types/rainbow.png" alt="Rainbow" /> <b class="header">Rainbow Energy</b> <a href="http://bulbapedia.bulbagarden.net/wiki/Rainbow_Energy_%28TCG%29">[BP]</a><br />
+      Draw 1 card from any Pokemon Deck, except the Delta Deck.
+    </p>
+
+    <p id="Delta-Rainbow-Energy">
+      <img src="images/types/rainbow.png" alt="Rainbow" /> <b class="header">Delta Rainbow Energy</b> <a href="http://bulbapedia.bulbagarden.net/wiki/%CE%94_Rainbow_Energy_%28TCG%29">[BP]</a><br />
+      Draw 1 card from any Pokemon Deck.
+    </p>
+    
+    <p id="Miracle-Energy">
+      <img src="images/types/rainbow.png" alt="Rainbow" /><img src="images/types/rainbow.png" alt="Rainbow" /> <b class="header">Miracle Energy</b> <a href="http://bulbapedia.bulbagarden.net/wiki/Miracle_Energy_%28TCG%29">[BP]</a><br />
+      Draw 2 cards from any Pokemon Deck, except the Colorless Deck.
+    </p>
+    
+    <p id="Blend-GFPD-Energy">
+      <img src="images/types/colorless.png" alt="Colorless" /><img src="images/types/grass.png" alt="Grass" /><img src="images/types/fire.png" alt="Fire" /><img src="images/types/psychic.png" alt="Psychic" /><img src="images/types/darkness.png" alt="Darkness" /> <b class="header">Blend GFPD Energy</b> <a href="http://bulbapedia.bulbagarden.net/wiki/Blend_Energy_GFPD_%28TCG%29">[BP]</a><br />
+      Draw 1 card from either the Colorless, Grass, Fire, Psychic, or Darkness Deck.
+    </p>
+
+    <p id="Blend-WEPM-Energy">
+      <img src="images/types/colorless.png" alt="Colorless" /><img src="images/types/water.png" alt="Water" /><img src="images/types/lightning.png" alt="Lightning" /><img src="images/types/fighting.png" alt="Fighting" /><img src="images/types/metal.png" alt="Metal" /> <b class="header">Blend WEPM Energy</b> <a href="http://bulbapedia.bulbagarden.net/wiki/Blend_Energy_WLFM_%28TCG%29">[BP]</a><br />
+      Draw 1 card from either the Colorless, Water, Lightning, Fighting, or Metal Deck.
+    </p>
+
+    <p id="Full-Heal-Energy">
+      <img src="images/types/colorless.png" alt="Colorless" /> <b class="header">Full Heal Energy</b> <a href="http://bulbapedia.bulbagarden.net/wiki/Full_Heal_Energy_%28TCG%29">[BP]</a><br />
+      Draw 1 card from the Colorless Deck, also activate the effect of the <a href="#Full-Heal">Full Heal</a> Trainer.
+    </p>
+    
+    <p id="Recycle-Energy">
+      <img src="images/types/colorless.png" alt="Colorless" /> <b class="header">Recycle Energy</b> <a href="http://bulbapedia.bulbagarden.net/wiki/Recycle_Energy_%28TCG%29">[BP]</a><br />
+      Draw 1 card from the Colorless Deck, also activate the effect of the <a href="#Recycle">Recycle</a> Trainer.
+    </p>
+    
+    <p id="Retro-Energy">
+      <img src="images/types/colorless.png" alt="Colorless" /> <b class="header">Retro Energy</b> <a href="http://bulbapedia.bulbagarden.net/wiki/Retro_Energy_%28TCG%29">[BP]</a><br />
+      Draw 1 card from the Colorless Deck, also reveal 1 Pokemon in your hand. Select 1 Pokemon Deck. Add 1 Pokemon from the selected Deck that is in the same Evolution Tree as the revealed Pokemon, and which has a different name.
+    </p>
+    
     <h2 id="Trainers">Trainers</h2>
+    
+    <p id="Bills">
+      <b class="header">Bill / Bill's Teleporter / Bill's Maintanence</b><br />
+    </p>
+
+    <p id="Professor-Oaks">
+      <b class="header">Professor Oak / Imposter Oak</b><br />
+    </p>
+
+    <p id="Computer-Search">
+      <b class="header">Computer Search</b><br />
+    </p>
+
+    <p id="Pokemon-Center">
+      <b class="header">Pokemon Center</b><br />
+    </p>
+
+    <p id="Poke-Balls">
+      <b class="header">Poke Ball / Great Ball / Master Ball</b><br />
+    </p>
+
+    <p id="Devolution-Spray">
+      <b class="header">Devolution Spray</b><br />
+    </p>
+
+    <p id="Full-Heal">
+      <b class="header">Full Heal</b><br />
+    </p>
+
+    <p id="Gambler">
+      <b class="header">Gambler</b><br />
+    </p>
+
+    <p id="Recycle">
+      <b class="header">Recycle</b><br />
+    </p>
+
+    <p id="Gust-of-Wind">
+      <b class="header">Gust of Wind</b><br />
+    </p>
+
+    <p id="Rods">
+      <b class="header">Old / Good / Super Rod</b><br />
+    </p>
+
+    <p id="Switch">
+      <b class="header">Switch</b><br />
+    </p>
+
+    <p id="Energy-Search">
+      <b class="header">Energy Search</b><br />
+    </p>
+
+    <p id="Energy-Removals">
+      <b class="header">Energy Removal / Super Energy Removal</b><br />
+    </p>
+
+    <p id="Defender">
+      <b class="header">Defender</b><br />
+    </p>
+
+    <p id="Life-Herb">
+      <b class="header">Life Herb</b><br />
+    </p>
+
+    <p id="Sleep">
+      <b class="header">Sleep</b><br />
+    </p>
+
+    <p id="Good-Manners">
+      <b class="header">Good Manners</b><br />
+    </p>
+
+    <p id="Sabrinas-Gaze">
+      <b class="header">Sabrina's Gaze</b><br />
+    </p>
+
+    <p id="Interviewers-Question">
+      <b class="header">Interviewer's Question</b><br />
+    </p>
+
+    <p id="Blaines-Quiz-2">
+      <b class="header">Blaine's Quiz #2</b><br />
+    </p>
+
+    <p id="Warp-Point">
+      <b class="header">Warp Point</b><br />
+    </p>
+
+    <p id="Cheerleaders-Cheer">
+      <b class="header">Cheerleader's Cheer</b><br />
+    </p>
+
+    <p id="Mr-Fuji">
+      <b class="header">Mr. Fuji</b><br />
+    </p>
+
+    <p id="Engineers-Adjustments">
+      <b class="header">Engineer's Adjustments</b><br />
+    </p>
+
+    <p id="Fervor">
+      <b class="header">Fervor</b><br />
+    </p>
+
+    <p id="Rocky-Helmet">
+      <b class="header">Rocky Helmet</b><br />
+    </p>
     
     <h2 id="Glossary">Glossary</h2>
     
     <p>
       There are numerous terms used throughout this document, many of which are capitalized, like "Type", "Rotation", etc. These terms have special meanings which are explained below.
+    </p>
+    
+    <p id="Get">
+      <b class="header">Get</b><br />
+      "Getting" a Pokemon happens whenever it is somehow placed into your hand, no matter where it came from. Drawing, adding, swapping from another player, etc, all count as "getting". Cards which have effects prefaced by the phrase "After getting:" activate whenever that Pokemon is got.
     </p>
     
     <p id="Rotation">
