@@ -276,11 +276,14 @@
       table.alternating tr:nth-child(even) {
         background-color: rgba(0, 0, 0, .25);
       }
+    #points-table td {
+      text-align: center;
+    }
+    #points-table tr td:nth-child(3) {
+      font-size: 32px;
+    }
     table.image-table img {
       vertical-align: middle;
-    }
-    table.image-table tr td:first-child {
-      text-align: center;
     }
   </style>
 </head>
@@ -414,6 +417,7 @@
     </a>
     <ul class="toc_section">
       <li>- <a href="#Rotation">Rotation</a></li>
+      <li>- <a href="#Set">Set</a></li>
     </ul>
 
     <a class="toc_title" href="#FAQ">
@@ -421,6 +425,7 @@
     </a>
     <ul class="toc_section">
       <li>- <a href="#FAQ-Blaines-Quiz-1">Where's Blaine's Quiz #1?</a></li>
+      <li>- <a href="#FAQ-Mega-Pokemon">Mega Pokemon?</a></li>
     </ul>
 
     <a class="toc_title" href="#changelog">
@@ -676,12 +681,12 @@
     </p>
     
     <p>
-      Points are determined according to following table:
+      Points are determined according to the following table:
     </p>
     
-    <table class="alternating image-table">
+    <table id="points-table" class="alternating image-table">
       <tr>
-        <td></td>
+        <th><i>Example</i></th>
         <th>Pokemon</th>
         <th>Points</th>
       </tr>
@@ -832,6 +837,11 @@
     <p id="FAQ-Blaines-Quiz-1">
       <b class="header">Where's Blaine's Quiz #1?</b><br />
       Hmm, beats me.
+    </p>
+    
+    <p id="FAQ-Mega-Pokemon">
+      <b class="header">Mega Pokemon?</b><br />
+      ... will be added soon, probably.
     </p>
 
     <h2 id="changelog">Change Log</h2>
