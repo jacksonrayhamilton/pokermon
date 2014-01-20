@@ -270,6 +270,18 @@
         overflow: scroll;
       }
     }
+    table.alternating td {
+      padding: 2px;
+    }
+      table.alternating tr:nth-child(even) {
+        background-color: rgba(0, 0, 0, .25);
+      }
+    table.image-table img {
+      vertical-align: middle;
+    }
+    table.image-table tr td:first-child {
+      text-align: center;
+    }
   </style>
 </head>
 <body>
@@ -529,8 +541,7 @@
     </ul>
     
     <p>
-      These cards will be assembled into Decks, as described in the
-      <a href="#Decks">Decks section</a>.
+      These cards will be assembled into Decks, as described <a href="#Decks">below</a>.
     </p>
     
     <p>
@@ -633,10 +644,10 @@
     </p>
     
     <ul>
-      <li><b>Card Name</b> - Identifies it.</li>
-      <li><b>Type</b> (Pokemon only) - Determines which Deck it goes in; grants additional
+      <li><b>Card Name</b> &mdash; Identifies it.</li>
+      <li><b>Type</b> (Pokemon only) &mdash; Determines which Deck it goes in; grants additional
       points when paired with different Types in the same Evolution Tree.</li>
-      <li><b>"Evolves From" / "Evolves Into"</b> (Pokemon only) - Identifies the previous or next Pokemon in its Evolution Tree.</li>
+      <li><b>"Evolves From" / "Evolves Into"</b> (Pokemon only) &mdash; Identifies the previous or next Pokemon in its Evolution Tree.</li>
     </ul>
     
     <p>
@@ -650,13 +661,103 @@
     
     <p id="Winning">
       <b class="header">Winning</b><br />
-      After playing for 3 <a href="#Rotations">Rotations</a> after a player <a href="#Knocking">knocks</a>,
-      the player whose hand has the highest point value wins.
+      A player wins by accumulating the most points in his hand.
+      3 <a href="#Rotations">Rotations</a> after a player <a href="#Knocking">knocks</a>,
+      players reveal their hands, then calculate their points and determine a winner.
     </p>
     
     <p id="Calculating-Points">
       <b class="header">Calculating Points</b><br />
+      Points are calculated based on the Pokemon in a player's hand. All
+      Pokemon are worth points on their own. <a href="#Set">Sets</a> of
+      Pokemon can be counted for additional points. If a Pokemon is counted as
+      a part of a Set, it cannot be counted on its own or as a part of another
+      Set.
     </p>
+    
+    <p>
+      Points are determined according to following table:
+    </p>
+    
+    <table class="alternating image-table">
+      <tr>
+        <td></td>
+        <th>Pokemon</th>
+        <th>Points</th>
+      </tr>
+      <tr>
+        <td><img src="images/cards/charmander.jpg" /> or <img src="images/cards/togepi.jpg" /><br />
+        <i>Charmander; Togepi</i></td>
+        <td>Basic ("Stage 1") / Baby</td>
+        <td>1</td>
+      </tr>
+      <tr>
+        <td><img src="images/cards/charmeleon.jpg" /><br />
+        <i>Charmeleon</i></td>
+        <td>Stage 2</td>
+        <td>2</td>
+      </tr>
+      <tr>
+        <td><img src="images/cards/charizard.jpg" /><br />
+        <i>Charizard</i></td>
+        <td>Stage 3</td>
+        <td>3</td>
+      </tr>
+      <tr>
+        <td><img src="images/cards/pinsir.jpg" /><br />
+        <i>Pinsir</i></td>
+        <td>Does not evolve</td>
+        <td>4</td>
+      </tr>
+      <tr>
+        <td><img src="images/cards/mewtwo.jpg" /><br />
+        <i>Mewtwo</i></td>
+        <td>Legendary</td>
+        <td>5</td>
+      </tr>
+      <tr>
+        <td><img src="images/cards/charmander.jpg" /> + <img src="images/cards/charmeleon.jpg" /><br />
+        <i>Charmander, Charmeleon</i></td>
+        <td>Stage 1 + Stage 2<br />
+        <i>Stage 3 not present</i></td>
+        <td>6</td>
+      </tr>
+      <tr>
+        <td><img src="images/cards/riolu.jpg" /> + <img src="images/cards/lucario.jpg" /><br />
+        <i>Riolu, Lucario</i></td>
+        <td>Stage 1 + Stage 2<br />
+        <i>Only 2 Stages exist</i></td>
+        <td>8</td>
+      </tr>
+      <tr>
+        <td><img src="images/cards/eevee.jpg" /> + <img src="images/cards/vaporeon.jpg" /><br />
+        <i>Eevee, Vaporeon</i></td>
+        <td>Stage 1 + Stage 2<br />
+        <i>Only 2 Stages exist<br />
+        2 Different Types</i></td>
+        <td>10</td>
+      </tr>
+      <tr>
+        <td><img src="images/cards/charmander.jpg" /> + <img src="images/cards/charmeleon.jpg" /> + <img src="images/cards/charizard.jpg" /><br />
+        <i>Charmander, Charmeleon, Charizard</i></td>
+        <td>Stage 1 + Stage 2 + Stage 3</td>
+        <td>12</td>
+      </tr>
+      <tr>
+        <td><img src="images/cards/charmander-lightning.jpg" /> + <img src="images/cards/charmeleon.jpg" /> + <img src="images/cards/charizard.jpg" /><br />
+        <i>Charmander <img src="images/types/lightning.png" alt="Lightning" />, Charmeleon, Charizard</i></td>
+        <td>Stage 1 + Stage 2 + Stage 3<br />
+        <i>2 Different Types</i></td>
+        <td>14</td>
+      </tr>
+      <tr>
+        <td><img src="images/cards/charmander-lightning.jpg" /> + <img src="images/cards/charmeleon.jpg" /> + <img src="images/cards/charizard-darkness.jpg" /><br />
+        <i>Charmander <img src="images/types/lightning.png" alt="Lightning" />, Charmeleon, Charizard <img src="images/types/darkness.png" alt="Darkness" /></i></td>
+        <td>Stage 1 + Stage 2 + Stage 3<br />
+        <i>3 Different Types</i></td>
+        <td>16</td>
+      </tr>
+    </table>
     
     <p id="Preparation">
       <b class="header">Preparation</b><br />
@@ -687,8 +788,7 @@
     <p>
       There are numerous terms used throughout this document, many of which
       are capitalized, like "Type", "Rotation", etc. These terms have
-      special meanings, which are easy to imply for the most part, but
-      are explained in detail below.
+      special meanings which are explained below.
     </p>
     
     <p id="Rotation">
@@ -696,6 +796,36 @@
       A "Rotation" is said to have occurred after all players have
       taken 1 turn each in succession.
     </p>
+    
+    <p id="Set">
+      <b class="header">Set</b><br />
+      A "Set" is 2 or more Pokemon cards in the same Evolution Tree. A Set
+      does not need to contain a complete Evolution Tree. A Set must start from
+      the "bottom" of a Evolution Tree, except Babies are optional.
+    </p>
+    
+    <p>
+      <i>Examples of Sets:</i>
+    </p>
+    
+    <ul>
+      <li>Charmander + Charmeleon</li>
+      <li>Charmander + Charmeleon + Charizard</li>
+      <li>Magmar + Magmortar</li>
+      <li>Magby + Magmar</li>
+      <li>Poliwag + Poliwhirl + Poliwrath</li>
+      <li>Poliwag + Poliwhirl + Politoed</li>
+    </ul>
+    
+    <p>
+      <i>These are not Sets:</i>
+    </p>
+    
+    <ul>
+      <li>Charmander + Charizard</li>
+      <li>Charmeleon + Charizard</li>
+      <li>Poliwag + Poliwhirl + Poliwrath + Politoed</li>
+    </ul>
     
     <h2 id="FAQ">F.A.Q.</h2>
 
