@@ -3,6 +3,7 @@
 <head>
   <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+  <meta name="description" content="A spin-off of the Pokemon TCG, using the same cards but with objectives based on poker." />
   <meta name="viewport" content="width=device-width">
   <link rel="canonical" href="http://pokermon.herokuapp.com" />
   <link rel="icon" href="favicon.ico" />
@@ -290,6 +291,9 @@
     ol.nested-list ol {
       list-style-type: lower-alpha;
     }
+    img.middle {
+      vertical-align: middle;
+    }
   </style>
 </head>
 <body>
@@ -376,7 +380,7 @@
       Energies
     </a>
     <ul class="toc_section">
-      <li>- <a href="#Normal-Energy">Normal Energy</a></li>
+      <li>- <a href="#Basic-Energy">Basic Energy</a></li>
       <li>- <a href="#Rainbow-Energy">Rainbow Energy</a></li>
       <li>- <a href="#Delta-Rainbow-Energy">Delta Rainbow Energy</a></li>
       <li>- <a href="#Blend-GFPD-Energy">Blend GFPD Energy</a></li>
@@ -531,8 +535,8 @@
     <ul>
       <li><b>Complete "Evolution Trees"</b> &mdash; Like Charmander, Charmeleon and Charizard.</li>
       <li><b>"Legendaries"</b> &mdash; Like Mewtwo, Suicune.</li>
-      <li><b><a href="http://bulbapedia.bulbagarden.net/wiki/Energy_card_%28TCG%29">Energies</a></b> &mdash; A few copies of each basic <a href="#Type">Type</a>, and maybe a few special Types too.</li>
-      <li><b><a href="http://bulbapedia.bulbagarden.net/wiki/Trainer_card_%28TCG%29">Trainers</a></b> &mdash; 33% should be Bills, and any other combination of Trainers works for the rest.</li>
+      <li><b>Energies</b> <a href="http://bulbapedia.bulbagarden.net/wiki/Energy_card_%28TCG%29">[BP]</a> &mdash; A few copies of each basic <a href="#Type">Type</a>, and maybe a few special Types too.</li>
+      <li><b>Trainers</b> <a href="http://bulbapedia.bulbagarden.net/wiki/Trainer_card_%28TCG%29">[BP]</a> &mdash; 33% should be Bills, and any other combination of Trainers works for the rest.</li>
     </ul>
     
     <p>
@@ -595,7 +599,7 @@
     
     <p id="Energy-Deck">
       <b class="header">Energy Deck</b><br />
-      All Energy cards go in a single Deck. There should be Energies for each Type of Pokemon Deck used. "Basic" Energy cards (Colorless, Darkness, Dragon, Fairy, Fighting, Fire, Grass, Lightning, Metal, Psychic, and Water) should be available in same or similar quantities. (Colorless is <b>not</b> a "wildcard" like in the Pokemon TCG.) <a href="http://bulbapedia.bulbagarden.net/wiki/List_of_Special_Energy_cards">Special Energies</a> can also be included.
+      All Energy cards go in a single Deck. There should be Energies for each Type of Pokemon Deck used. <a href="#Basic-Energy">Basic Energy</a> cards should be available in same or similar quantities. Special Energies <a href="http://bulbapedia.bulbagarden.net/wiki/List_of_Special_Energy_cards">[BP]</a> can also be included.
     </p>
     
     <p>
@@ -646,51 +650,51 @@
         <th>Points</th>
       </tr>
       <tr>
-        <td><img src="images/cards-sm/charmander.jpg" /> or <img src="images/cards-sm/togepi.jpg" /><br />
+        <td><img src="images/cards-sm/charmander.jpg" alt="Charmander" /> or <img src="images/cards-sm/togepi.jpg" alt="Togepi" /><br />
         <i>Charmander; Togepi</i></td>
         <td>Basic ("Stage 1") / Baby</td>
         <td>1</td>
       </tr>
       <tr>
-        <td><img src="images/cards-sm/charmeleon.jpg" /><br />
+        <td><img src="images/cards-sm/charmeleon.jpg" alt="Charmeleon" /><br />
         <i>Charmeleon</i></td>
         <td>Stage 2</td>
         <td>2</td>
       </tr>
       <tr>
-        <td><img src="images/cards-sm/charizard.jpg" /><br />
+        <td><img src="images/cards-sm/charizard.jpg" alt="Charizard" /><br />
         <i>Charizard</i></td>
         <td>Stage 3</td>
         <td>3</td>
       </tr>
       <tr>
-        <td><img src="images/cards-sm/pinsir.jpg" /><br />
+        <td><img src="images/cards-sm/pinsir.jpg" alt="Pinsir" /><br />
         <i>Pinsir</i></td>
         <td>Does not evolve</td>
         <td>4</td>
       </tr>
       <tr>
-        <td><img src="images/cards-sm/mewtwo.jpg" /><br />
+        <td><img src="images/cards-sm/mewtwo.jpg" alt="Mewtwo" /><br />
         <i>Mewtwo</i></td>
         <td>Legendary</td>
         <td>5</td>
       </tr>
       <tr>
-        <td><img src="images/cards-sm/charmander.jpg" /> + <img src="images/cards-sm/charmeleon.jpg" /><br />
+        <td><img src="images/cards-sm/charmander.jpg" alt="Charmander" /> + <img src="images/cards-sm/charmeleon.jpg" alt="Charmeleon" /><br />
         <i>Charmander, Charmeleon</i></td>
         <td>Stage 1 + Stage 2<br />
         <i>Stage 3 not present</i></td>
         <td>6</td>
       </tr>
       <tr>
-        <td><img src="images/cards-sm/riolu.jpg" /> + <img src="images/cards-sm/lucario.jpg" /><br />
+        <td><img src="images/cards-sm/riolu.jpg" alt="Riolu" /> + <img src="images/cards-sm/lucario.jpg" alt="Lucario" /><br />
         <i>Riolu, Lucario</i></td>
         <td>Stage 1 + Stage 2<br />
         <i>Only 2 Stages exist</i></td>
         <td>8</td>
       </tr>
       <tr>
-        <td><img src="images/cards-sm/eevee.jpg" /> + <img src="images/cards-sm/vaporeon.jpg" /><br />
+        <td><img src="images/cards-sm/eevee.jpg" alt="Eevee" /> + <img src="images/cards-sm/vaporeon.jpg" alt="Vaporeon" /><br />
         <i>Eevee, Vaporeon</i></td>
         <td>Stage 1 + Stage 2<br />
         <i>Only 2 Stages exist<br />
@@ -698,20 +702,20 @@
         <td>10</td>
       </tr>
       <tr>
-        <td><img src="images/cards-sm/charmander.jpg" /> + <img src="images/cards-sm/charmeleon.jpg" /> + <img src="images/cards-sm/charizard.jpg" /><br />
+        <td><img src="images/cards-sm/charmander.jpg" alt="Charmander" /> + <img src="images/cards-sm/charmeleon.jpg" alt="Charmeleon" /> + <img src="images/cards-sm/charizard.jpg" alt="Charizard" /><br />
         <i>Charmander, Charmeleon, Charizard</i></td>
         <td>Stage 1 + Stage 2 + Stage 3</td>
         <td>12</td>
       </tr>
       <tr>
-        <td><img src="images/cards-sm/charmander-lightning.jpg" /> + <img src="images/cards-sm/charmeleon.jpg" /> + <img src="images/cards-sm/charizard.jpg" /><br />
+        <td><img src="images/cards-sm/charmander-lightning.jpg" alt="Charmander Lightning" /> + <img src="images/cards-sm/charmeleon.jpg" alt="Charmeleon" /> + <img src="images/cards-sm/charizard.jpg" alt="Charizard" /><br />
         <i>Charmander <img src="images/types/lightning.png" alt="Lightning" />, Charmeleon, Charizard</i></td>
         <td>Stage 1 + Stage 2 + Stage 3<br />
         <i>2 Different Types</i></td>
         <td>14</td>
       </tr>
       <tr>
-        <td><img src="images/cards-sm/charmander-lightning.jpg" /> + <img src="images/cards-sm/charmeleon.jpg" /> + <img src="images/cards-sm/charizard-darkness.jpg" /><br />
+        <td><img src="images/cards-sm/charmander-lightning.jpg" alt="Charmander Lightning" /> + <img src="images/cards-sm/charmeleon.jpg" alt="Charmeleon" /> + <img src="images/cards-sm/charizard-darkness.jpg" alt="Charizard Darkness" /><br />
         <i>Charmander <img src="images/types/lightning.png" alt="Lightning" />, Charmeleon, Charizard <img src="images/types/darkness.png" alt="Darkness" /></i></td>
         <td>Stage 1 + Stage 2 + Stage 3<br />
         <i>3 Different Types</i></td>
@@ -913,7 +917,7 @@
 
     <p id="Mew">
       <img src="images/sprites/mew.gif" alt="Mew" /> <b class="header">Mew</b><br />
-      After getting: Shuffle this card into its Pile and add any Pokemon from any Pile, except Arceus.
+      After getting: Shuffle this card into its Deck and add any Pokemon from any Deck, except Arceus.
     </p>
 
     <p id="Raikou">
@@ -958,12 +962,12 @@
 
     <p id="Heatran">
       <img src="images/sprites/heatran.gif" alt="Heatran" /> <b class="header">Heatran</b><br />
-      After getting: Select 1 Pile. Count out half of the Pile, face-down, rounded up, and send that half to your Discard Pile.
+      After getting: Select 1 Pile. Count out half of the Pile, face-down, rounded up, and discard that half to your Discard Pile.
     </p>
 
     <p id="Giratina">
       <img src="images/sprites/giratina.gif" alt="Giratina" /> <b class="header">Giratina</b><br />
-      After getting: Discard your entire hand, except this card.
+      After getting: Discard your hand, except this card.
     </p>
 
     <p id="Darkrai">
@@ -973,22 +977,36 @@
 
     <p id="Arceus">
       <img src="images/sprites/arceus.gif" alt="Arceus" /> <b class="header">Arceus</b><br />
-      After getting: Draw 1 Pokemon from each Pile.
+      After getting: Draw 1 Pokemon from each Pokemon Deck.
     </p>
 
     <p id="Yveltal">
       <img src="images/sprites/yveltal.gif" alt="Yveltal" /> <b class="header">Yveltal</b><br />
-      After getting: Discard your hand, except for this card. This card's point value is the quantity "(cards in your Discard Pile) / 2", rounded up.
+      After getting: Discard your hand, except this card. This card's point value is the quantity "(cards in your Discard Pile) / 2", rounded up.
     </p>
 
     
     <h2 id="Energies">Energies</h2>
     
-    <p id="Normal-Energy">
-      <img src="images/types/colorless.png" alt="Colorless" /><img src="images/types/darkness.png" alt="Darkness" /><img src="images/types/dragon.png" alt="Dragon" /><img src="images/types/fairy.png" alt="Fairy" /><img src="images/types/fighting.png" alt="Fighting" /><img src="images/types/fire.png" alt="Fire" /><img src="images/types/grass.png" alt="Grass" /><img src="images/types/lightning.png" alt="Lightning" /><img src="images/types/metal.png" alt="Metal" /><img src="images/types/psychic.png" alt="Psychic" /><img src="images/types/water.png" alt="Water" /> <b class="header">Normal Energy</b><br />
-      <i>This effect applies for any normal ("basic") Energy.</i><br />
-      <i>A normal Energy would have any <b>one</b> of the above Types and no printed text.</i><br />
-      Draw 1 card from the Pokemon Deck corresponding to this card's Type.
+    <p>
+      Energy cards let a player draw Pokemon.
+    </p>
+    
+    <p>
+      When a player draws a <a href="Basic-Energy">Basic Energy</a>, he discards it and draws 1 Pokemon from the Pokemon Deck corresponding to its Type.
+    </p>
+    
+    <p>
+      <i>Example:</i> A player draws 1 Fire (<img class="middle" src="images/types/fire.png" alt="Fire" />) Energy. He discards it and draws 1 card from the top of the Fire Pokemon Deck. 
+    </p>
+    
+    <p>
+      Any Energy that is not Basic is considered "Special." Special Energy cards have effects, which activate when the Energy is drawn. These effects are listed below.
+    </p>
+    
+    <p id="Basic-Energy">
+      <img src="images/types/colorless.png" alt="Colorless" />, <img src="images/types/darkness.png" alt="Darkness" />, <img src="images/types/dragon.png" alt="Dragon" />, <img src="images/types/fairy.png" alt="Fairy" />, <img src="images/types/fighting.png" alt="Fighting" />, <img src="images/types/fire.png" alt="Fire" />, <img src="images/types/grass.png" alt="Grass" />, <img src="images/types/lightning.png" alt="Lightning" />, <img src="images/types/metal.png" alt="Metal" />, <img src="images/types/psychic.png" alt="Psychic" /> or <img src="images/types/water.png" alt="Water" /> <b class="header">Basic Energy</b> <a href="http://bulbapedia.bulbagarden.net/wiki/Energy_card_%28TCG%29#Basic_Energy_cards">[BP]</a><br />
+      (A Basic Energy has <i>only 1</i> of the above Types printed on it.)<br>
     </p>
     
     <p id="Rainbow-Energy">
@@ -1018,20 +1036,32 @@
 
     <p id="Full-Heal-Energy">
       <img src="images/types/colorless.png" alt="Colorless" /> <b class="header">Full Heal Energy</b> <a href="http://bulbapedia.bulbagarden.net/wiki/Full_Heal_Energy_%28TCG%29">[BP]</a><br />
-      Draw 1 card from the Colorless Deck, also activate the effect of the <a href="#Full-Heal">Full Heal</a> Trainer.
+      Draw 1 card from the Colorless Deck. Then, activate the effect of the <a href="#Full-Heal">Full Heal</a> Trainer.
     </p>
     
     <p id="Recycle-Energy">
       <img src="images/types/colorless.png" alt="Colorless" /> <b class="header">Recycle Energy</b> <a href="http://bulbapedia.bulbagarden.net/wiki/Recycle_Energy_%28TCG%29">[BP]</a><br />
-      Draw 1 card from the Colorless Deck, also activate the effect of the <a href="#Recycle">Recycle</a> Trainer.
+      Draw 1 card from the Colorless Deck. Then, activate the effect of the <a href="#Recycle">Recycle</a> Trainer.
     </p>
     
     <p id="Retro-Energy">
       <img src="images/types/colorless.png" alt="Colorless" /> <b class="header">Retro Energy</b> <a href="http://bulbapedia.bulbagarden.net/wiki/Retro_Energy_%28TCG%29">[BP]</a><br />
-      Draw 1 card from the Colorless Deck, also reveal 1 Pokemon in your hand and select 1 Pokemon Deck. Add 1 Pokemon from the selected Deck that is in the same Evolution Tree as the revealed Pokemon, and which has a different name.
+      Draw 1 card from the Colorless Deck. Then, reveal 1 Pokemon in your hand and select 1 Pokemon Deck. Add 1 Pokemon from the selected Deck to your hand which is a previous OR next evolution of the selected Pokemon.
     </p>
     
     <h2 id="Trainers">Trainers</h2>
+    
+    <p>
+      Trainer cards have effects which either assist or harm players. These effects are defined below.
+    </p>
+    
+    <p>
+      A Trainer card's effect is activated after being drawn. Most Trainers are discarded after their effects have resolved.
+    </p>
+    
+    <p>
+      Trainers which say "After getting: Place face-up." are placed in front of their owners instead of being discarded. Their effects can be activated by their owners whenever appropriate.
+    </p>
     
     <p id="Bills">
       <b class="header">Bill / Bill's Teleporter / Bill's Maintanence</b><br />
@@ -1073,7 +1103,7 @@
     
     <p id="Energy-Search">
       <b class="header">Energy Search</b><br />
-      Add any normal Energy from the Energy Deck.
+      Add any Basic Energy from the Energy Deck.
     </p>
     
     <p id="Engineers-Adjustments">
