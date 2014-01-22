@@ -72,6 +72,10 @@
       width: 450px;
       height: 80px;
     }
+    img#example-layout {
+      width: 450px;
+      height: 241px;
+    }
     p, div.container ul {
       margin: 25px 0;
       width: 550px;
@@ -208,8 +212,14 @@
       div#sidebar {
         display: none;
       }
-      img#logo {
+      img#logo,
+      img#example-layout {
         max-width: 450px;
+        width: 100%;
+        height: auto;
+      }
+      img.card {
+        max-width: 45px;
         width: 100%;
         height: auto;
       }
@@ -239,7 +249,8 @@
         padding: 10px 0 10px 30px;
         border: 0;
       }
-      img#logo {
+      img#logo,
+      img#example-layout {
         width: auto;
         height: auto;
       }
@@ -311,10 +322,6 @@
       Introduction
     </a>
 
-   <!-- <a class="toc_title" href="#upgrading">
-      Upgrading
-    </a>-->
-
     <a class="toc_title" href="#Getting-Started">
       Getting Started
     </a>
@@ -325,7 +332,6 @@
       <li>- <a href="#Pokemon-Decks">Pokemon Decks</a></li>
       <li>- <a href="#Energy-Deck">Energy Deck</a></li>
       <li>- <a href="#Trainer-Deck">Trainer Deck</a></li>
-      <li>- <a href="#Reading-Cards">Reading Cards</a></li>
     </ul>
     
     <a class="toc_title" href="#How-to-Play">
@@ -352,6 +358,7 @@
       <li>- <a href="#Jynx">Jynx</a></li>
       <li>- <a href="#Unknown">Unknown</a></li>
       <li>- <a href="#Wobbuffet">Wobbuffet</a></li>
+      <li>- <a href="#Smoochum">Smoochum</a></li>
     </ul>
     
     <a class="toc_title" href="#Legendaries">
@@ -499,31 +506,16 @@
 
     <p>
       <b class="header">What is Pokermon?</b><br />
-      <i>Hustle</i> with friends and foes as everyone races to acquire and evolve sets of Pokemon, all-the-while trying to thwart their opponents at the same task. Pokermon pairs the <b>awesomeness</b> of Pokemon with the <b>objectives</b> of poker to create a <i>new</i> card game.
+      <i>Hustle</i> with friends and foes as you race to acquire and evolve sets of Pokemon, all-the-while trying to thwart your opponents at the same task. Pokermon pairs the <b>awesomeness</b> of Pokemon with the <b>objectives</b> of poker to create a <i>new</i> card game.
     </p>
     
     <p>
-      Players collect sets of Pokemon, each with calculable point values. A player who believes he has more points than his opponents can "Knock," and 3 rounds after Knocking, the player who is proven to have the most points wins.
+      Players collect sets of Pokemon, each with calculable point values. A player who believes he has more points than his opponents can "Knock," and 3 rounds after Knocking, the player with most points wins.
     </p>
     
     <p>
       This website serves as a reference for the standard rules of Pokermon. Keep this site handy on your laptop or smartphone when you first start playing.
     </p>
-
-    <!--<h2 id="upgrading">Upgrading to 0.2.0</h2>
-
-    <p>
-      In the future, we'll want to loosely-document changes between versions.
-    </p>
-
-    <ul>
-      <li>
-        An important point to know.
-      </li>
-      <li>
-        Another important tidbit.
-      </li>
-    </ul>-->
 
     <h2 id="Getting-Started">Getting Started</h2>
 
@@ -548,9 +540,9 @@
     </p>
     
     <ul>
-      <li><b>Proxy</b> &mdash; Print and cut-out images of missing cards, and place those images on top of real cards inside plastic card sleeves. Note that if you use any Pokemon proxies, <i>all</i> your Pokemon cards must be sleeved; and the same applies if you use Energy or Trainer proxies. Packs of 50+ card sleeves can be purchased at any hobby shop for about $5 each.</li>
-      <li><b>One man's trash is another's treasure</b> &mdash; If you check your local hobby shop's "commons box," you will probably find almost everything you need to play. Cards from these boxes should cost no more than $0.10 each.</li>
-      <li><b>Pre-constructed decks</b> &mdash; Running at about $10 each and available at Wal-Marts and Targets, pre-constructed decks contain complete Evolution Trees and copious amounts of Energies and Trainers. 3 or 4 different decks and you would have everything needed to play except for Legendaries, which can be proxied.</li>
+      <li><b>Proxy</b> &mdash; Print and cut-out images of missing cards, and place those images on top of real cards inside plastic card sleeves. Packs of 50+ card sleeves can be purchased at any hobby shop for about $5 each.</li>
+      <li><b>One man's trash is another's treasure</b> &mdash; See if your local hobby shop has a "commons box," and dig through it until you find what you need. Cards from these boxes should cost no more than $0.10 each.</li>
+      <li><b>Pre-constructed decks</b> &mdash; These contain complete Evolution Trees and lots of Energies and Trainers. 3 or 4 different decks and you would have everything needed to play, except Legendaries. These run for about $10 each.</li>
     </ul>
     
     <p id="Additional-Things-Needed">
@@ -561,8 +553,6 @@
     <ul>
       <li><b>A coin</b> &mdash; For card effects.</li>
       <li><b>A six-sided die</b> &mdash; For deciding who goes first, and card effects.</li>
-      <li><b>A calculator</b> &mdash; For adding up points.</li>
-      <li><b>A laptop or smartphone</b> &mdash; To reference this site.</li>
     </ul>
     
     <p id="Decks">
@@ -570,15 +560,15 @@
       There are multiple Decks in Pokermon, and each is shared by all players. All Decks are placed in the playing area at easily-reachable positions.
     </p>
     
-    <!--<p>
-      An example placement is pictured below:
+    <p>
+      An example layout is pictured below:
     </p>
     
-    <img src="images/example-placement.png" />-->
+    <img id="example-layout" src="images/example-layout.jpg" alt="Example Layout" />
     
     <p id="Pokemon-Decks">
       <b class="header">Pokemon Decks</b><br />
-      Pokemon are sorted into Decks by their <a href="#Type">Types</a>. All Fire Pokemon go in one Deck, all Waters in another, etc. Pokemon with multiple Types (Delta Species) go in a special "Delta" Deck.
+      Pokemon are sorted into Decks by their <a href="#Type">Types</a>. All Fire Pokemon go in one Deck, all Waters in another, etc. Pokemon with multiple Types (e.g. Delta Species) go in a special "Delta" Deck.
     </p>
     
     <p>
@@ -599,32 +589,16 @@
     
     <p id="Energy-Deck">
       <b class="header">Energy Deck</b><br />
-      All Energy cards go in a single Deck. There should be Energies for each Type of Pokemon Deck used. <a href="#Basic-Energy">Basic Energy</a> cards should be available in same or similar quantities. Special Energies <a href="http://bulbapedia.bulbagarden.net/wiki/List_of_Special_Energy_cards">[BP]</a> can also be included.
+      All Energy cards go in a single Deck. There should be Energies for each <a href="#Type">Type</a> of Pokemon Deck used. <a href="#Basic-Energy">Basic Energy</a> cards should be available in same or similar quantities. Special Energies <a href="http://bulbapedia.bulbagarden.net/wiki/List_of_Special_Energy_cards">[BP]</a> can also be included.
     </p>
     
     <p>
-      <i>Example:</i> Players have only built Colorless, Fire, and Darkness Pokemon Decks. A well-balanced Energy Deck for that combination would have 4 Colorless, 4 Fire, 4 Darkness, and 2 Rainbow Energies.
+      <i>Example:</i> Players have only built Colorless (<img class="middle" src="images/types/colorless.png" alt="Colorless" />), Fire (<img class="middle" src="images/types/fire.png" alt="Fire" />), and Darkness (<img class="middle" src="images/types/darkness.png" alt="Darkness" />) Pokemon Decks. A well-balanced Energy Deck for that combination would have 4 Colorless Energies, 4 Fire Energies, 4 Darkness Energies, and 2 Rainbow (<img class="middle" src="images/types/rainbow.png" alt="Rainbow" />) Energies.
     </p>
     
     <p id="Trainer-Deck">
       <b class="header">Trainer Deck</b><br />
-      All Trainer cards go in a single Deck. The Deck should be comprised of about 33% Bills, and the rest is up to you.
-    </p>
-    
-    <p id="Reading-Cards">
-      <b class="header">Reading Cards</b><br />
-      Although Pokermon uses cards from the Pokemon Trading Card game, only a subset of what is printed on the cards is relevant:
-    </p>
-    
-    <ul>
-      <li><b>Card Name</b> &mdash; Identifies it.</li>
-      <li><b>Type</b> (for Energy) &mdash; Identifies it.</li>
-      <li><b>Type</b> (for Pokemon) &mdash; Determines which Deck it goes in; grants additional points when paired with different Types in a Set.</li>
-      <li><b>"Evolves From" / "Evolves Into"</b> (for Pokemon) &mdash; Identifies the previous or next Pokemon in its Evolution Tree.</li>
-    </ul>
-    
-    <p>
-      For all other relevant gameplay information, such as a card's effects (if any), refer to its entry in the <a href="#Pokemon">Pokemon</a>, <a href="#Legendaries">Legendaries</a>, <a href="#Energies">Energies</a> or <a href="#Trainers">Trainers</a> section.
+      All Trainer cards go in a single Deck. The Deck should be comprised of about 33% Bills <a href="http://bulbapedia.bulbagarden.net/wiki/Bill_%28Base_Set_91%29">[BP]</a>, and the rest is up to you.
     </p>
     
     <h2 id="How-to-Play">How to Play</h2>
@@ -636,7 +610,7 @@
     
     <p id="Calculating-Points">
       <b class="header">Calculating Points</b><br />
-      Points are calculated based on the Pokemon in a player's hand. All Pokemon are worth points on their own. <a href="#Set">Sets</a> of Pokemon can be counted for large amounts of points. If a Pokemon is counted as a part of a Set, it cannot be counted on its own or as a part of another Set.
+      Points are calculated based on the Pokemon in a player's hand. All Pokemon are worth points on their own. <a href="#Set">Sets</a> of Pokemon can be counted for greater amounts of points. If a Pokemon is counted as a part of a Set, it cannot be additionally counted on its own or as a part of another Set.
     </p>
     
     <p>
@@ -650,51 +624,51 @@
         <th>Points</th>
       </tr>
       <tr>
-        <td><img src="images/cards-sm/charmander.jpg" alt="Charmander" /> or <img src="images/cards-sm/togepi.jpg" alt="Togepi" /><br />
+        <td><img class="card" src="images/cards-sm/charmander.jpg" alt="Charmander" /> or <img class="card" src="images/cards-sm/togepi.jpg" alt="Togepi" /><br />
         <i>Charmander; Togepi</i></td>
-        <td>Basic ("Stage 1") / Baby</td>
+        <td>Stage 1 ("Basic") / Baby</td>
         <td>1</td>
       </tr>
       <tr>
-        <td><img src="images/cards-sm/charmeleon.jpg" alt="Charmeleon" /><br />
+        <td><img class="card" src="images/cards-sm/charmeleon.jpg" alt="Charmeleon" /><br />
         <i>Charmeleon</i></td>
         <td>Stage 2</td>
         <td>2</td>
       </tr>
       <tr>
-        <td><img src="images/cards-sm/charizard.jpg" alt="Charizard" /><br />
+        <td><img class="card" src="images/cards-sm/charizard.jpg" alt="Charizard" /><br />
         <i>Charizard</i></td>
         <td>Stage 3</td>
         <td>3</td>
       </tr>
       <tr>
-        <td><img src="images/cards-sm/pinsir.jpg" alt="Pinsir" /><br />
+        <td><img class="card" src="images/cards-sm/pinsir.jpg" alt="Pinsir" /><br />
         <i>Pinsir</i></td>
         <td>Does not evolve</td>
         <td>4</td>
       </tr>
       <tr>
-        <td><img src="images/cards-sm/mewtwo.jpg" alt="Mewtwo" /><br />
+        <td><img class="card" src="images/cards-sm/mewtwo.jpg" alt="Mewtwo" /><br />
         <i>Mewtwo</i></td>
         <td>Legendary</td>
         <td>5</td>
       </tr>
       <tr>
-        <td><img src="images/cards-sm/charmander.jpg" alt="Charmander" /> + <img src="images/cards-sm/charmeleon.jpg" alt="Charmeleon" /><br />
+        <td><img class="card" src="images/cards-sm/charmander.jpg" alt="Charmander" /> + <img class="card" src="images/cards-sm/charmeleon.jpg" alt="Charmeleon" /><br />
         <i>Charmander, Charmeleon</i></td>
         <td>Stage 1 + Stage 2<br />
         <i>Stage 3 not present</i></td>
         <td>6</td>
       </tr>
       <tr>
-        <td><img src="images/cards-sm/riolu.jpg" alt="Riolu" /> + <img src="images/cards-sm/lucario.jpg" alt="Lucario" /><br />
+        <td><img class="card" src="images/cards-sm/riolu.jpg" alt="Riolu" /> + <img class="card" src="images/cards-sm/lucario.jpg" alt="Lucario" /><br />
         <i>Riolu, Lucario</i></td>
         <td>Stage 1 + Stage 2<br />
         <i>Only 2 Stages exist</i></td>
         <td>8</td>
       </tr>
       <tr>
-        <td><img src="images/cards-sm/eevee.jpg" alt="Eevee" /> + <img src="images/cards-sm/vaporeon.jpg" alt="Vaporeon" /><br />
+        <td><img class="card" src="images/cards-sm/eevee.jpg" alt="Eevee" /> + <img class="card" src="images/cards-sm/vaporeon.jpg" alt="Vaporeon" /><br />
         <i>Eevee, Vaporeon</i></td>
         <td>Stage 1 + Stage 2<br />
         <i>Only 2 Stages exist<br />
@@ -702,20 +676,20 @@
         <td>10</td>
       </tr>
       <tr>
-        <td><img src="images/cards-sm/charmander.jpg" alt="Charmander" /> + <img src="images/cards-sm/charmeleon.jpg" alt="Charmeleon" /> + <img src="images/cards-sm/charizard.jpg" alt="Charizard" /><br />
+        <td><img class="card" src="images/cards-sm/charmander.jpg" alt="Charmander" /> + <img class="card" src="images/cards-sm/charmeleon.jpg" alt="Charmeleon" /> + <img class="card" src="images/cards-sm/charizard.jpg" alt="Charizard" /><br />
         <i>Charmander, Charmeleon, Charizard</i></td>
         <td>Stage 1 + Stage 2 + Stage 3</td>
         <td>12</td>
       </tr>
       <tr>
-        <td><img src="images/cards-sm/charmander-lightning.jpg" alt="Charmander Lightning" /> + <img src="images/cards-sm/charmeleon.jpg" alt="Charmeleon" /> + <img src="images/cards-sm/charizard.jpg" alt="Charizard" /><br />
+        <td><img class="card" src="images/cards-sm/charmander-lightning.jpg" alt="Charmander Lightning" /> + <img class="card" src="images/cards-sm/charmeleon.jpg" alt="Charmeleon" /> + <img class="card" src="images/cards-sm/charizard.jpg" alt="Charizard" /><br />
         <i>Charmander <img src="images/types/lightning.png" alt="Lightning" />, Charmeleon, Charizard</i></td>
         <td>Stage 1 + Stage 2 + Stage 3<br />
         <i>2 Different Types</i></td>
         <td>14</td>
       </tr>
       <tr>
-        <td><img src="images/cards-sm/charmander-lightning.jpg" alt="Charmander Lightning" /> + <img src="images/cards-sm/charmeleon.jpg" alt="Charmeleon" /> + <img src="images/cards-sm/charizard-darkness.jpg" alt="Charizard Darkness" /><br />
+        <td><img class="card" src="images/cards-sm/charmander-lightning.jpg" alt="Charmander Lightning" /> + <img class="card" src="images/cards-sm/charmeleon.jpg" alt="Charmeleon" /> + <img class="card" src="images/cards-sm/charizard-darkness.jpg" alt="Charizard Darkness" /><br />
         <i>Charmander <img src="images/types/lightning.png" alt="Lightning" />, Charmeleon, Charizard <img src="images/types/darkness.png" alt="Darkness" /></i></td>
         <td>Stage 1 + Stage 2 + Stage 3<br />
         <i>3 Different Types</i></td>
@@ -732,37 +706,33 @@
       Each player rolls a die. Whoever rolls highest goes first. Players who tie for highest re-roll among each other. Players will take Turns clockwise from the first player.
     </p>
     
-    <p>
-      The game begins now... believe it! And may the odds be ever in your favor.
-    </p>
-    
     <p id="Turn-Structure">
       <b class="header">Turn Structure</b><br />
-      Each player's Turn is divided into Phases. Phases occur in the order listed below. One Phase transitions into the next as a result of a player's actions. (<i>Example:</i> Starting one's Turn and immediately drawing implies having entered the Knock Phase and having chosen not to Knock.)
+      Each player's Turn is divided into Phases. Phases occur in the order listed below.
     </p>
     
     <ul>
       <li><b>Knock Phase</b> &mdash; If the turn player is <a href="#Knocking">allowed to Knock</a> and wants to, he must do so at the beginning of his Turn.</li>
-      <li><b>Draw Phase</b> &mdash; The turn player draws 1 Trainer card and activates its effect. (<a href="#Trainers">Trainer effects are listed here.</a>)</li>
-      <li><b>Effect Phase</b> &mdash; The effect of the Trainer resolves. See <a href="#Resolving-Effects">Resolving Effects</a>.</li>
-      <li><b>Discard Phase</b> &mdash; If the turn player's hand size exceeds the hand size limit (defaulting to 10 cards), he must discard cards to his <a href="#Discard-Pile">Discard Pile</a> until his hand size matches the limit.</li>
+      <li><b>Draw Phase</b> &mdash; The turn player draws 1 Trainer card and activates its effect.</li>
+      <li><b>Effect Phase</b> &mdash; The effect of the Trainer resolves.</li>
+      <li><b>Discard Phase</b> &mdash; If the turn player's hand size exceeds the hand size limit (10 cards), he must discard cards to his <a href="#Discard-Pile">Discard Pile</a> until his hand size matches the limit.</li>
     </ul>
     
     <p id="Resolving-Effects">
       <b class="header">Resolving Effects</b><br />
-      Cards' effects are listed in the <a href="#Pokemon">Pokemon</a>, <a href="#Legendaries">Legendaries</a>, <a href="#Energies">Energies</a> and <a href="#Trainers">Trainers</a> sections. (A card's effect is <b>not</b> what is physically printed on it.)
+      (Cards' effects are listed in the <a href="#Pokemon">Pokemon</a>, <a href="#Legendaries">Legendaries</a>, <a href="#Energies">Energies</a> and <a href="#Trainers">Trainers</a> sections. A card's effect is <b>not</b> what is physically printed on it.)
     </p>
     
     <p>
-      After a card's effect has finished resolving, discard it to its corresponding Discard Pile, unless its effect instructs otherwise.
+      For Pokemon effects, reveal the Pokemon and activate the effect. For Energies and Trainers, activate the effect and discard the card after its effect resolves (unless instructed otherwise).
     </p>
     
     <p>
-      If an effect instructs multiple cards to be drawn, they are all drawn one-by-one (without activation), and the order which they are drawn is made obvious. If an effect instructs multiple cards to be added, the player declares an arbitrary order in which they are added. After multiple cards are drawn or added, activate their effects "in order."
+      If 2 or more cards are drawn or added to the hand at once, note their order. Then activate their effects one-by-one in that order.
     </p>
     
     <p>
-      <i>Example:</i> A player activates Professor Oak and discards 3 cards. He draws a Fire Energy, a Darkness Energy, and a Grass Energy, and also a Bill and a Pokemon Center. After drawing all these cards, he activates them all in the order they were drawn.
+      <i>Example:</i> A player activates <a href="#Professor-Oak">Professor Oak</a> and discards 3 cards. He draws a Fire Energy, a Darkness Energy, and a Grass Energy, and also a <a href="#Bill">Bill</a> and a <a href="#Pokemon-Center">Pokemon Center</a>. After drawing all these cards, he activates them all in the order they were drawn.
     </p>
     
     <p>
@@ -818,7 +788,7 @@
     
     <ol>
       <li>All players with lower scores shuffle their cards back into the cards' respective Decks, and withdraw from the game.</li>
-      <li>The remaining players continue playing normally (until a player Knocks again and 3 Rotations pass and a definite winner is decided).</li>
+      <li>The remaining players continue playing.</li>
     </ol>
 
     <h2 id="Pokemon">Pokemon</h2>
@@ -829,7 +799,7 @@
     
     <p id="Babies">
       <img src="images/sprites/togepi.gif" alt="Togepi" /> <b class="header">Babies</b><br />
-      Baby Pokemon are optional components of any Evolution Tree. If they are left out of a Set, their direct evolutions are treated as Stage 1 Pokemon. If they are included in a Set, the Baby is treated as the Stage 1 Pokemon, and every Pokemon after it is treated as being 1 Stage higher.
+      Baby Pokemon are optional components of any Evolution Tree. If they are left out of a Set, their next evolutions are treated as Stage 1 Pokemon. If they are included in a Set, the Baby is treated as the Stage 1 Pokemon, and every Pokemon after it is treated as being 1 Stage higher.
     </p>
     
     <p>
@@ -896,7 +866,12 @@
     
     <p id="Wobbuffet">
       <img src="images/sprites/wobbuffet.gif" alt="Wobbuffet" /> <b class="header">Wobbuffet</b><br />
-      After a player activates a Trainer, say "WOBBUFFET" and discard this card: Negate the Trainer.
+      After a player activates a Trainer, say "WOBBUFFET!" and discard this card to negate the Trainer.
+    </p>
+    
+    <p id="Smoochum">
+      <img src="images/sprites/smoochum.gif" alt="Smoochum" /> <b class="header">Smoochum</b><br />
+      After getting: Draw 1 Energy.
     </p>
     
     <h2 id="Legendaries">Legendaries</h2>
@@ -917,7 +892,7 @@
 
     <p id="Mew">
       <img src="images/sprites/mew.gif" alt="Mew" /> <b class="header">Mew</b><br />
-      After getting: Shuffle this card into its Deck and add any Pokemon from any Deck, except Arceus.
+      After getting: Shuffle this card into its Deck and add any Pokemon from any Deck to your hand, except Arceus.
     </p>
 
     <p id="Raikou">
@@ -952,7 +927,7 @@
 
     <p id="Jirachi">
       <img src="images/sprites/jirachi.gif" alt="Jirachi" /> <b class="header">Jirachi</b><br />
-      After getting: Add any 1 Trainer from the Trainer Pile.
+      After getting: Activate any 1 Trainer from the Trainer Pile.
     </p>
 
     <p id="Palkia">
@@ -993,11 +968,11 @@
     </p>
     
     <p>
-      When a player draws a <a href="Basic-Energy">Basic Energy</a>, he discards it and draws 1 Pokemon from the Pokemon Deck corresponding to its Type.
+      When a player draws a <a href="Basic-Energy">Basic Energy</a>, he draws 1 Pokemon from the Pokemon Deck corresponding to its Type, and discards the Energy.
     </p>
     
     <p>
-      <i>Example:</i> A player draws 1 Fire (<img class="middle" src="images/types/fire.png" alt="Fire" />) Energy. He discards it and draws 1 card from the top of the Fire Pokemon Deck. 
+      <i>Example:</i> A player draws 1 Fire (<img class="middle" src="images/types/fire.png" alt="Fire" />) Energy. He draws 1 card from the top of the Fire Pokemon Deck, then discards the Energy.
     </p>
     
     <p>
@@ -1046,7 +1021,7 @@
     
     <p id="Retro-Energy">
       <img src="images/types/colorless.png" alt="Colorless" /> <b class="header">Retro Energy</b> <a href="http://bulbapedia.bulbagarden.net/wiki/Retro_Energy_%28TCG%29">[BP]</a><br />
-      Draw 1 card from the Colorless Deck. Then, reveal 1 Pokemon in your hand and select 1 Pokemon Deck. Add 1 Pokemon from the selected Deck to your hand which is a previous OR next evolution of the selected Pokemon.
+      Draw 1 card from the Colorless Deck. Then, reveal 1 Pokemon in your hand and select 1 Deck. Add the previous OR next evolution of the revealed Pokemon from the selected Deck to your hand.
     </p>
     
     <h2 id="Trainers">Trainers</h2>
@@ -1070,17 +1045,17 @@
     
     <p id="Blaines-Quiz-2">
       <b class="header">Blaine's Quiz #2</b><br />
-      Select 1 opponent with a hand of size 3 or greater. He presents his hand to you, facedown, and you shuffle it and place it facedown in a stack. He declares 1 card name. Reveal the top 3 cards of the stack, and if the named card is not among them, discard those 3 cards. Finally, return any remaining cards to the opponent's hand.
+      Select 1 opponent with a hand of size 3 or greater. He presents his hand to you, face-down, and you shuffle it and place it face-down in a stack. He declares 1 card name. Reveal the top 3 cards of the stack, and if the named card is not among them, discard those 3 cards. Finally, return any remaining cards to the opponent's hand.
     </p>
     
     <p id="Cheerleaders-Cheer">
       <b class="header">Cheerleader's Cheer</b><br />
-      Reveal 1 Pokemon in your hand. Select 1 Pokemon Deck and add 1 Pokemon from that Deck that is 1 Stage higher than the revealed Pokemon.
+      Reveal 1 Pokemon in your hand and select 1 Deck. Add the next evolution of the revealed Pokemon from the selected Deck to your hand.
     </p>
     
     <p id="Computer-Search">
       <b class="header">Computer Search</b><br />
-      Discard 2 Pokemon: Add any Trainer from the Trainer Deck.
+      Discard 1 Pokemon: Activate any 1 Trainer from the Trainer Deck.
     </p>
     
     <p id="Defender">
@@ -1090,7 +1065,7 @@
     
     <p id="Devolution-Spray">
       <b class="header">Devolution Spray</b><br />
-      Select 1 random card from an opponent's hand and reveal it. If that Pokemon is Stage 2 or higher, return it to its Deck. That opponent can then select 1 Pokemon Deck, and add 1 Pokemon from it which is 1 Stage lower than the Pokemon returned and which is in the same Evolution Tree.
+      Select 1 random card from an opponent's hand and reveal it. If that Pokemon has a previous evolution, return it to its Deck. Then, that opponent can select 1 Deck. He adds the previous evolution of the returned Pokemon from the selected Deck to his hand.
     </p>
     
     <p id="Energy-Removals">
@@ -1103,12 +1078,12 @@
     
     <p id="Energy-Search">
       <b class="header">Energy Search</b><br />
-      Add any Basic Energy from the Energy Deck.
+      Activate any Basic Energy from the Energy Deck.
     </p>
     
     <p id="Engineers-Adjustments">
       <b class="header">Engineer's Adjustments</b><br />
-      Reveal the top 3 Trainers of the Trainer Deck, and select 1. Shuffle the other 2 back into the Trainer Deck, and add the selected Trainer.
+      Reveal the top 3 Trainers of the Trainer Deck, and select 1. Shuffle the other 2 into the Trainer Deck, and activate the selected Trainer.
     </p>
     
     <p id="Fervor">
@@ -1118,7 +1093,7 @@
     
     <p id="Full-Heal">
       <b class="header">Full Heal</b><br />
-      Add 1 Pokemon from any Discard Pile.
+      Add 1 Pokemon from any Discard Pile to your hand.
     </p>
     
     <p id="Gambler">
@@ -1140,22 +1115,22 @@
     
     <p id="Interviewers-Question">
       <b class="header">Interviewer's Question</b><br />
-      Select 1 opponent and declare 1 card. He then declares 1 card. Reveal hands to each other, and if either player declared the name of a card in his opponent's hand, the declarer selects 1 card with the declared name from his opponent's hand and adds it to his own hand. (Both players must select <i>before</i> either adds.)
+      Select 1 opponent and declare 1 card. He then declares 1 card. Reveal hands to each other, and each player selects 1 card with the name he declared from his opponent's hand, if any exist. Then, any selected cards are added to the hands of the players who selected them.
     </p>
     
     <p id="Life-Herb">
       <b class="header">Life Herb</b><br />
-      After getting: Place face-up. Discard this card to add 1 Pokemon from your Discard Pile.
+      After getting: Place face-up. Discard this card to add 1 Pokemon from your Discard Pile to your hand.
     </p>
     
     <p id="Mr-Fuji">
       <b class="header">Mr. Fuji</b><br />
-      Same as <a href="#Cheerleaders-Cheer">Cheerleader's Cheer</a>, but the Pokemon must be 1 Stage lower.
+      Same as <a href="#Cheerleaders-Cheer">Cheerleader's Cheer</a>, except add the <i>previous evolution</i> instead.
     </p>
     
     <p id="Rods">
       <b class="header">Old Rod / Good Rod / Super Rod</b><br />
-      Select 1 Pokemon Deck, except the Delta Deck, then add 1 Poke from that Deck which has an appropriate Stage:<br />
+      Select 1 Pokemon Deck, except the Delta Deck, then add 1 Pokemon from that Deck to your hand with an appropriate Stage:<br />
       <b>Old Rod:</b> Stage 1 ("Basic") or Baby<br />
       <b>Good Rod:</b> Stage 2<br />
       <b>Super Rod:</b> Stage 3<br />
@@ -1164,15 +1139,15 @@
     
     <p id="Poke-Balls">
       <b class="header">Poke Ball / Great Ball / Master Ball</b><br />
-      <b>Poke Ball:</b> Flip a coin. If heads, add 1 Pokemon from any Pokemon Deck, except the Delta Deck, and except a Legendary.<br />
+      <b>Poke Ball:</b> Flip a coin. If heads, add 1 Pokemon from any Pokemon Deck to your hand, except the Delta Deck, and except a Legendary.<br />
       <b>Great Ball:</b> Flip 2 coins. If at least 1 is heads, apply Poke Ball's effect's outcome. If 2 are heads, the Delta Deck may also be added-from.<br />
-      <b>Master Ball:</b> Add 1 Pokemon from any Pokemon Deck, except a Legendary.<br />
+      <b>Master Ball:</b> Add 1 Pokemon from any Pokemon Deck to your hand, except a Legendary.<br />
       For all of the above Poke Balls, reveal the added card.
     </p>
 
     <p id="Pokemon-Center">
       <b class="header">Pokemon Center</b><br />
-      Add up to 3 Pokemon from any Discard Pile(s).
+      Add up to 3 Pokemon from any Discard Pile(s) to your hand.
     </p>
     
     <p id="Professor-Oaks">
@@ -1198,12 +1173,12 @@
 
     <p id="Sleep">
       <b class="header">Sleep</b><br />
-      Flip a coin. If heads, all opponents lose their next turn.
+      All players go to sleep. (At the beginning of an asleep player's turn, he flips a coin. If heads, he wakes up. If tails, he skips his turn.)
     </p>
 
     <p id="Switch">
       <b class="header">Switch</b><br />
-      Without ever revealing the cards, choose 1 card in your hand and 1 random card in an opponent's hand. Swap those cards.
+      Without revealing the cards, choose 1 card in your hand and 1 random card in an opponent's hand. Swap those cards.
     </p>
 
     <p id="Warp-Point">
@@ -1227,9 +1202,13 @@
       A "Rotation" is said to have occurred after all players have taken 1 Turn each in succession.
     </p>
     
+    <p>
+      Turns which are skipped still count towards a Rotation's completion.
+    </p>
+    
     <p id="Set">
       <b class="header">Set</b><br />
-      A "Set" is 2 or more Pokemon cards in the same Evolution Tree. A Set does not need to contain a complete Evolution Tree. A Set must start from the "bottom" of a Evolution Tree, except Babies are optional.
+      A "Set" is 2 or more Pokemon cards in the same Evolution Tree. A Set does not need to contain a complete Evolution Tree. A Set must start from the "bottom" of a Evolution Tree, except <a href="#Babies">Babies</a> are optional.
     </p>
     
     <p>
@@ -1332,18 +1311,18 @@
     
     <p id="FAQ-Mega-Pokemon">
       <b class="header">Mega Pokemon?</b><br />
-      ... will be added soon, probably.
+      ...will be added soon, probably.
     </p>
 
     <h2 id="changelog">Change Log</h2>
 
-    <p>
-      <b class="header">0.1.1</b> &mdash; <small><i>Someday in the future</i></small> <!--&mdash; <a href="https://github.com/jacksonrayhamilton/pokermon/compare/0.1.0...0.1.1">Diff</a> &mdash; <a href="http://htmlpreview.github.com/?https://raw.github.com/jacksonrayhamilton/pokermon/0.1.1/index.html">Docs</a>--><br />
+    <!--<p>
+      <b class="header">0.1.1</b> &mdash; <small><i>Someday in the future</i></small> &mdash; <a href="https://github.com/jacksonrayhamilton/pokermon/compare/0.1.0...0.1.1">Diff</a> &mdash; <a href="http://htmlpreview.github.com/?https://raw.github.com/jacksonrayhamilton/pokermon/0.1.1/index.html">Docs</a><br />
       Second Pokermon release.
-    </p>
+    </p>-->
 
     <p>
-      <b class="header">0.1.0</b> &mdash; <small><i>Jan 18, 2013</i></small> <!--&mdash; <a href="http://htmlpreview.github.com/?https://raw.github.com/jacksonrayhamilton/pokermon/0.1.0/index.html">Docs</a>--><br />
+      <b class="header">0.1.0</b> &mdash; <small><i>Jan 22, 2013</i></small> <!--&mdash; <a href="http://htmlpreview.github.com/?https://raw.github.com/jacksonrayhamilton/pokermon/0.1.0/index.html">Docs</a>--><br />
       Initial Pokermon release.
     </p>
     
@@ -1363,6 +1342,21 @@
     </table>
 
   </div>
+  
+  <!-- Google Analytics; remove if you're forking. -->
+  <script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-47357568-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+  </script>
 
 </body>
 </html>
