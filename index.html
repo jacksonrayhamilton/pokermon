@@ -331,7 +331,7 @@
   <div id="sidebar" class="interface">
 
     <a class="toc_title" href="#">
-      Pokermon <span class="version">(0.1.1)</span>
+      Pokermon <span class="version">(0.1.2)</span>
     </a>
     <ul class="toc_section">
       <li>&raquo; <a href="http://github.com/jacksonrayhamilton/pokermon">GitHub Repository</a></li>
@@ -436,9 +436,12 @@
       <li>- <a href="#Blaines-Quiz-2">Blaine's Quiz #2</a></li>
       <li>- <a href="#Cheerleaders-Cheer">Cheerleader's Cheer</a></li>
       <li>- <a href="#Computer-Search">Computer Search</a></li>
+      <li>- <a href="#Crushing-Hammer">Crushing Hammer</a></li>
       <li>- <a href="#Defender">Defender</a></li>
       <li>- <a href="#Devolution-Spray">Devolution Spray</a></li>
+      <li>- <a href="#Energy-Ark">Energy Ark</a></li>
       <li>- <a href="#Energy-Removals">Energy Removal / Super Energy Removal</a></li>
+      <li>- <a href="#Energy-Retrieval">Energy Retrieval</a></li>
       <li>- <a href="#Energy-Search">Energy Search</a></li>
       <li>- <a href="#Engineers-Adjustments">Engineer's Adjustments</a></li>
       <li>- <a href="#Fervor">Fervor</a></li>
@@ -450,6 +453,8 @@
       <li>- <a href="#Life-Herb">Life Herb</a></li>
       <li>- <a href="#Mr-Fuji">Mr. Fuji</a></li>
       <li>- <a href="#Mysterious-Fossil">Mysterious Fossil</a></li>
+      <li>- <a href="#Nightly-Garbage-Run">Nightly Garbage Run</a></li>
+      <li>- <a href="#Reversal-Trigger">Reversal Trigger</a></li>
       <li>- <a href="#Rods">Old Rod / Good Rod / Super Rod</a></li>
       <li>- <a href="#Poke-Balls">Poke Ball / Great Ball / Master Ball</a></li>
       <li>- <a href="#Pokemon-Center">Pokemon Center</a></li>
@@ -1133,6 +1138,11 @@
       Discard 1 Pokemon: Activate any 1 Trainer from the Trainer Deck.
     </p>
     
+    <p id="Crushing-Hammer">
+      <b class="header">Crushing Hammer</b><br />
+      Each player discards 2 random cards from his hand.
+    </p>
+    
     <p id="Defender">
       <b class="header">Defender</b><br />
       After getting: Place face-up. When a Pokemon would be discarded from your hand: Discard this card instead of that Pokemon.
@@ -1143,6 +1153,11 @@
       Select 1 random card from an opponent's hand and reveal it. If that Pokemon has a previous evolution, return it to its Deck. Then, that opponent can select 1 Deck. He adds the previous evolution of the returned Pokemon from the selected Deck to his hand.
     </p>
     
+    <p id="Energy-Ark">
+      <b class="header">Energy Ark</b><br />
+      Discard any number of cards from your hand to draw the same amount of Energies.
+    </p>
+    
     <p id="Energy-Removals">
       <b class="header">Energy Removal / Super Energy Removal</b><br />
       After getting: Place face-up. When an opponent activates an Energy card(s):<br />
@@ -1151,9 +1166,14 @@
       Then discard this card.
     </p>
     
+    <p id="Energy-Retrieval">
+      <b class="header">Energy Retrieval</b><br />
+      Select 2 Energies from the Energy Discard Pile. Activate them and shuffle them back into the Energy Deck.
+    </p>
+    
     <p id="Energy-Search">
       <b class="header">Energy Search</b><br />
-      Activate any Basic Energy from the Energy Deck.
+      Draw 3 cards from the Energy Deck and resolve them. Then discard 2 cards from your hand.
     </p>
     
     <p id="Engineers-Adjustments">
@@ -1206,6 +1226,16 @@
     <p id="Mysterious-Fossil">
       <b class="header">Mysterious Fossil</b><br />
       After getting: Place face-up. Discard this card to draw 1 card from the Fossil Deck.
+    </p>
+    
+    <p id="Nightly-Garbage-Run">
+      <b class="header">Nightly Garbage Run</b><br />
+      For each Discard Pile: Shuffle it and place it face-down. Then add the top card of the Pile to your hand.
+    </p>
+    
+    <p id="Reversal-Trigger">
+      <b class="header">Reversal Trigger</b><br />
+      After getting: Place face-up. If a card effect would affect a player: You can discard this card and select another player. The selected player is affected instead.
     </p>
     
     <p id="Rods">
@@ -1388,14 +1418,22 @@
       <b class="header">Where's Blaine's Quiz #1?</b><br />
       Hmm, beats me.
     </p>
-    
-    <p id="FAQ-Mega-Pokemon">
-      <b class="header">Mega Pokemon?</b><br />
-      ...will be added soon, probably.
-    </p>
 
     <h2 id="changelog">Change Log</h2>
-
+    
+    <p>
+      <b class="header">0.1.2</b> &mdash; <small><i>Mar 11, 2014</i></small> &mdash; <a href="https://github.com/jacksonrayhamilton/pokermon/compare/0.1.1...0.1.2">Diff</a> &mdash; <a href="http://htmlpreview.github.com/?https://raw.github.com/jacksonrayhamilton/pokermon/0.1.2/index.html">Docs</a><br />
+      Add more Trainers:
+      <ul>
+        <li>Crushing Hammer</li>
+        <li>Energy Ark</li>
+        <li>Energy Search (effect rewritten)</li>
+        <li>Energy Retrieval</li>
+        <li>Nightly Garbage Run</li>
+        <li>Reversal Trigger</li>
+      </ul>
+    </p>
+    
     <p>
       <b class="header">0.1.1</b> &mdash; <small><i>Mar 11, 2014</i></small> &mdash; <a href="https://github.com/jacksonrayhamilton/pokermon/compare/0.1.0...0.1.1">Diff</a> &mdash; <a href="http://htmlpreview.github.com/?https://raw.github.com/jacksonrayhamilton/pokermon/0.1.1/index.html">Docs</a><br />
       Add Fossils.<br />
